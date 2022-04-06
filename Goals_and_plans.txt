@@ -1,0 +1,11 @@
+Project Plan:
+
+5 April 22
+
+GOAL: with inserted location to hit, the weight of launched bullet, and height of launch, create a function that spits out angle of launch and animate it
+
+-Darian will create the skeleton of the graphic that will be an animation of the outputted angle
+-Jonah will begin work on algorithms and functions to model 
+-Mitchell will work on a user interface that allows for input of the three parameters\
+
+meet again Thursday 8:30pm
