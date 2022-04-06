@@ -1,0 +1,66 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      1683,         56]
+NotebookOptionsPosition[      1199,         39]
+NotebookOutlinePosition[      1607,         55]
+CellTagsIndexPosition[      1564,         52]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell[BoxData[
+ RowBox[{"Graphics", "[", 
+  RowBox[{"{", 
+   RowBox[{
+    RowBox[{"RGBColor", "[", 
+     RowBox[{".4", ",", ".8", ",", "1"}], "]"}], ",", 
+    RowBox[{"Rectangle", "[", "]"}]}], "}"}], "]"}]], "Input",
+ CellChangeTimes->{{3.858204022794071*^9, 3.8582040956888638`*^9}},
+ CellLabel->"In[12]:=",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"],
+
+Cell[BoxData[
+ GraphicsBox[
+  {RGBColor[0.4, 0.8, 1], RectangleBox[{0, 0}]}]], "Output",
+ CellChangeTimes->{{3.8582040379318314`*^9, 3.8582040959740047`*^9}},
+ CellLabel->"Out[12]=",ExpressionUUID->"2b3dd4b6-8d9b-4bde-b185-0cec5913e6c5"]
+}, Open  ]]
+},
+WindowSize->{569.25, 624.75},
+WindowMargins->{{429, Automatic}, {48, Automatic}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"630923aa-63f7-4495-b3e8-7a91c3fbffc5"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 363, 8, 28, "Input",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"],
+Cell[946, 32, 237, 4, 399, "Output",ExpressionUUID->"2b3dd4b6-8d9b-4bde-b185-0cec5913e6c5"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
