@@ -9,3 +9,13 @@ GOAL: with inserted location to hit, the weight of launched bullet, and height o
 -Mitchell will work on a user interface that allows for input of the three parameters\
 
 meet again Thursday 8:30pm
+
+7 April 22
+
+by saturday:
+
+-jonah will complete the frame by frame simulation tonight
+-mitch will create a description of the program and also include sliders for the user interface
+-Darian will create an animation that works well with {x,y},{x',y'}
+
+meet again saturday at 8am
