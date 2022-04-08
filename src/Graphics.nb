@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     38891,        928]
-NotebookOptionsPosition[     37897,        904]
-NotebookOutlinePosition[     38301,        920]
-CellTagsIndexPosition[     38258,        917]
+NotebookDataLength[     31227,        765]
+NotebookOptionsPosition[     30000,        737]
+NotebookOutlinePosition[     30412,        753]
+CellTagsIndexPosition[     30369,        750]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -36,6 +36,8 @@ Cell[BoxData[
  CellChangeTimes->{{3.8582070896962967`*^9, 3.858207092312795*^9}},
  CellLabel->
   "In[137]:=",ExpressionUUID->"221a16a5-2b2f-4672-b2d2-a625034f7bf6"],
+
+Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -65,25 +67,117 @@ Cell[BoxData[
   "\[IndentingNewLine]", 
   RowBox[{
    RowBox[{
+    RowBox[{"g", "=", "9.8"}], " ", 
+    RowBox[{"(*", " ", 
+     RowBox[{"Effect", " ", "of", " ", "gravity", " ", "in", " ", 
+      RowBox[{"m", "/", 
+       RowBox[{"s", "^", "2"}]}]}], " ", "*)"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"frameT", "=", ".1"}], " ", 
+    RowBox[{"(*", " ", 
+     RowBox[{
+     "Amount", " ", "of", " ", "time", " ", "in", " ", "a", " ", "frame", " ",
+       "in", " ", "seconds"}], " ", "*)"}], ";"}], "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"Vt", "=", 
+     RowBox[{
+      RowBox[{"m", "*", 
+       RowBox[{"g", "/", "c"}]}], "/.", 
+      RowBox[{"{", 
+       RowBox[{
+        RowBox[{"m", "\[Rule]", "1"}], ",", 
+        RowBox[{"c", "\[Rule]", ".15"}]}], "}"}]}]}], ";"}], 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Terminal", " ", "velocity", " ", "using", " ", "mass", " ", "in", " ", 
+     RowBox[{"kg", ".", " ", "c"}], " ", "is", " ", "a", " ", "constant", " ",
+      "for", " ", "air", " ", 
+     RowBox[{"resistance", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{"PositionX", "=", 
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      RowBox[{"xVel", "*", 
+       RowBox[{"Exp", "[", 
+        RowBox[{
+         RowBox[{"-", "g"}], "*", 
+         RowBox[{"t", "/", "Vt"}]}], "]"}]}], ",", "t"}], "]"}]}], 
+   "\[IndentingNewLine]", 
+   RowBox[{"PositionY", "=", 
+    RowBox[{"Integrate", "[", 
+     RowBox[{
+      RowBox[{
+       RowBox[{"yVel", "*", 
+        RowBox[{"Exp", "[", 
+         RowBox[{
+          RowBox[{"-", "g"}], "*", 
+          RowBox[{"t", "/", "Vt"}]}], "]"}]}], "-", 
+       RowBox[{"Vt", 
+        RowBox[{"(", 
+         RowBox[{"1", "-", 
+          RowBox[{"Exp", "[", 
+           RowBox[{
+            RowBox[{"-", "g"}], "*", 
+            RowBox[{"t", "/", "Vt"}]}], "]"}]}], ")"}]}]}], ",", "t"}], 
+     "]"}]}], "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{"jonahsFunctionForX", "[", 
      RowBox[{"x_", ",", "y_", ",", "u_", ",", "v_"}], "]"}], ":=", 
     RowBox[{"x", "+", 
-     RowBox[{"u", "*", "dt"}]}]}], "\[IndentingNewLine]", 
+     RowBox[{"(", 
+      RowBox[{"PositionX", "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"t", "\[Rule]", "frameT"}], ",", 
+         RowBox[{"xVel", "\[Rule]", "u"}]}], "}"}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{"PositionX", "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"t", "\[Rule]", "0"}], ",", 
+         RowBox[{"xVel", "\[Rule]", "u"}]}], "}"}]}], ")"}]}]}], 
+   "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"jonahsFunctionForY", "[", 
      RowBox[{"x_", ",", "y_", ",", "u_", ",", "v_"}], "]"}], ":=", 
     RowBox[{"y", "+", 
-     RowBox[{"v", "*", "dt"}]}]}], "\[IndentingNewLine]", 
+     RowBox[{"(", 
+      RowBox[{"PositionY", "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"t", "\[Rule]", "frameT"}], ",", 
+         RowBox[{"yVel", "\[Rule]", "v"}]}], "}"}]}], ")"}], "-", 
+     RowBox[{"(", 
+      RowBox[{"PositionY", "/.", 
+       RowBox[{"{", 
+        RowBox[{
+         RowBox[{"t", "\[Rule]", "0"}], ",", 
+         RowBox[{"yVel", "\[Rule]", "v"}]}], "}"}]}], ")"}]}]}], 
+   "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"jonahsFunctionForU", "[", 
-     RowBox[{"x_", ",", "y_", ",", "u_", ",", "v_"}], "]"}], ":=", "u"}], 
-   "\[IndentingNewLine]", 
+     RowBox[{"x_", ",", "y_", ",", "u_", ",", "v_"}], "]"}], ":=", 
+    RowBox[{"u", "*", 
+     RowBox[{"Exp", "[", 
+      RowBox[{
+       RowBox[{"-", "g"}], "*", 
+       RowBox[{"frameT", "/", "Vt"}]}], "]"}]}]}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"jonahsFunctionForV", "[", 
      RowBox[{"x_", ",", "y_", ",", "u_", ",", "v_"}], "]"}], ":=", 
-    RowBox[{"v", "-", 
-     RowBox[{"9.8", "*", "dt"}]}]}], "\[IndentingNewLine]", 
-   "\[IndentingNewLine]", 
+    RowBox[{
+     RowBox[{"v", "*", 
+      RowBox[{"Exp", "[", 
+       RowBox[{
+        RowBox[{"-", "g"}], "*", 
+        RowBox[{"frameT", "/", "Vt"}]}], "]"}]}], "-", 
+     RowBox[{"Vt", 
+      RowBox[{"(", 
+       RowBox[{"1", "-", 
+        RowBox[{"Exp", "[", 
+         RowBox[{
+          RowBox[{"-", "g"}], "*", 
+          RowBox[{"frameT", "/", "Vt"}]}], "]"}]}], ")"}]}]}]}], 
+   "\[IndentingNewLine]", "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"testEnd", "[", 
      RowBox[{"x_", ",", "y_", ",", "u_", ",", "v_"}], "]"}], ":=", 
@@ -96,7 +190,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"starty", "=", "50"}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"startu", "=", "5"}], ";"}], "\[IndentingNewLine]", 
+    RowBox[{"startu", "=", "25"}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"startv", "=", "5"}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
@@ -119,8 +213,55 @@ Cell[BoxData[
    3.858374341873391*^9, 3.858374361854478*^9}, {3.8583746919907866`*^9, 
    3.858374740616707*^9}, {3.8583747887114735`*^9, 3.8583748262454233`*^9}, {
    3.8583748705909786`*^9, 3.8583748864264727`*^9}, {3.8583749180749235`*^9, 
-   3.8583749357510386`*^9}, {3.8583750157189054`*^9, 3.8583750390889997`*^9}},
- CellLabel->"In[72]:=",ExpressionUUID->"c9f097ed-017c-48d5-a517-c5406896bf61"],
+   3.8583749357510386`*^9}, {3.8583750157189054`*^9, 
+   3.8583750390889997`*^9}, {3.8584281636326323`*^9, 
+   3.8584281935773315`*^9}, {3.8584282259612184`*^9, 
+   3.8584283505227137`*^9}, {3.8584283870746927`*^9, 
+   3.8584284162242937`*^9}, {3.858428471357561*^9, 3.85842851829358*^9}, {
+   3.858429731739577*^9, 3.858429740801889*^9}, {3.8584304198592014`*^9, 
+   3.8584304214260845`*^9}, {3.8584304949224043`*^9, 
+   3.8584305066302423`*^9}, {3.8584306081275015`*^9, 
+   3.8584306346612644`*^9}, {3.858430688213254*^9, 3.8584307607226205`*^9}, {
+   3.8584308110530252`*^9, 3.858430915103775*^9}, {3.8584310387867947`*^9, 
+   3.8584311002211723`*^9}, {3.8584311684892483`*^9, 
+   3.8584311935154247`*^9}, {3.858431223563093*^9, 3.858431225771858*^9}, {
+   3.858431297531434*^9, 3.8584313515087953`*^9}, {3.8584314076961813`*^9, 
+   3.8584315264115705`*^9}, {3.858431605891302*^9, 3.858431652220917*^9}, {
+   3.8584316918039107`*^9, 3.858431695335894*^9}, {3.8584317824602213`*^9, 
+   3.8584317825792065`*^9}, {3.8584318236662035`*^9, 3.858431956082419*^9}, {
+   3.858431991845502*^9, 3.858432011947798*^9}, {3.8584322713105607`*^9, 
+   3.858432358823919*^9}, {3.858432422257346*^9, 3.8584325216592765`*^9}, {
+   3.858432580620381*^9, 3.858432602708372*^9}, {3.8584326382070827`*^9, 
+   3.8584326707006226`*^9}, {3.8584327083457985`*^9, 3.858432732758385*^9}, {
+   3.8584327870854654`*^9, 
+   3.8584327958209066`*^9}},ExpressionUUID->"c9f097ed-017c-48d5-a517-\
+c5406896bf61"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{"-", "6.666666666666667`"}], " ", 
+  SuperscriptBox["\[ExponentialE]", 
+   RowBox[{
+    RowBox[{"-", "0.15`"}], " ", "t"}]], " ", "xVel"}]], "Output",
+ CellChangeTimes->{3.858432528678309*^9, 3.8584327354173717`*^9},
+ CellLabel->
+  "Out[251]=",ExpressionUUID->"f7516052-4ef1-4e13-bbb7-200b7bed1f08"],
+
+Cell[BoxData[
+ RowBox[{
+  RowBox[{
+   RowBox[{"-", "65.33333333333334`"}], " ", "t"}], "-", 
+  RowBox[{"6.666666666666667`", " ", 
+   SuperscriptBox["\[ExponentialE]", 
+    RowBox[{
+     RowBox[{"-", "0.15`"}], " ", "t"}]], " ", 
+   RowBox[{"(", 
+    RowBox[{"65.33333333333334`", "\[VeryThinSpace]", "+", 
+     RowBox[{"1.`", " ", "yVel"}]}], ")"}]}]}]], "Output",
+ CellChangeTimes->{3.858432528678309*^9, 3.85843273550182*^9},
+ CellLabel->
+  "Out[252]=",ExpressionUUID->"f00d705b-a1e0-4ae5-a24c-ef09c65be454"]
+}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -200,7 +341,8 @@ Cell[BoxData[
        RowBox[{"xy", ",", "uv"}], "]"}]}], "}"}]}], "\[IndentingNewLine]", 
    "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.8583742591844378`*^9, 3.8583742604541817`*^9}},
- CellLabel->"In[52]:=",ExpressionUUID->"0b752553-d195-4532-9c3a-ee0bc62fb435"],
+ CellLabel->
+  "In[266]:=",ExpressionUUID->"0b752553-d195-4532-9c3a-ee0bc62fb435"],
 
 Cell[CellGroupData[{
 
@@ -287,7 +429,8 @@ Cell[BoxData[{
     "]"}]}], "\[IndentingNewLine]"}], "\[IndentingNewLine]", 
  RowBox[{"ListAnimate", "[", 
   RowBox[{"bulletGraphics", ",", 
-   RowBox[{"fps", "=", "25"}]}], "]"}], "\[IndentingNewLine]"}], "Input",
+   RowBox[{"fps", "=", 
+    RowBox[{"1", "/", "frameT"}]}]}], "]"}], "\[IndentingNewLine]"}], "Input",
  CellChangeTimes->{{3.858204022794071*^9, 3.8582040956888638`*^9}, {
    3.858204253041006*^9, 3.85820426462668*^9}, {3.858204338919372*^9, 
    3.8582043572047687`*^9}, {3.858204390006424*^9, 3.85820439698874*^9}, {
@@ -312,19 +455,21 @@ Cell[BoxData[{
    3.858374253803146*^9}, {3.8583744200110564`*^9, 3.858374547706339*^9}, {
    3.858374634582861*^9, 3.858374685215395*^9}, {3.8583747451854167`*^9, 
    3.858374769248746*^9}, {3.858374858916848*^9, 3.8583748655554442`*^9}, 
-   3.85837490196423*^9, {3.858374942761856*^9, 3.8583749470089827`*^9}},
- CellLabel->"In[82]:=",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"],
+   3.85837490196423*^9, {3.858374942761856*^9, 3.8583749470089827`*^9}, {
+   3.858431744340681*^9, 3.858431746975345*^9}},
+ CellLabel->
+  "In[269]:=",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"],
 
 Cell[BoxData[
  TagBox[
   StyleBox[
-   DynamicModuleBox[{$CellContext`i33$$ = 82, Typeset`show$$ = True, 
+   DynamicModuleBox[{$CellContext`i20$$ = 1, Typeset`show$$ = True, 
     Typeset`bookmarkList$$ = {
-    "\"min\"" :> {$CellContext`i33$$ = 1}, 
-     "\"max\"" :> {$CellContext`i33$$ = 95}}, Typeset`bookmarkMode$$ = "Menu",
+    "\"min\"" :> {$CellContext`i20$$ = 1}, 
+     "\"max\"" :> {$CellContext`i20$$ = 41}}, Typeset`bookmarkMode$$ = "Menu",
      Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
     "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`i33$$], 1, ""}, 1, 95, 1}}, Typeset`size$$ = 
+       Hold[$CellContext`i20$$], 1, ""}, 1, 41, 1}}, Typeset`size$$ = 
     Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
     Typeset`skipInitDone$$ = True}, 
     PaneBox[
@@ -335,11 +480,10 @@ Cell[BoxData[
            TagBox[
             StyleBox[GridBox[{
                {"\<\"\"\>", 
-                AnimatorBox[Dynamic[$CellContext`i33$$], {1, 95, 1},
-                 AnimationRate->25,
-                 AnimationRunTime->25.05598783493042,
-                 AnimationRunning->False,
-                 AnimationTimeIndex->3.2334911727903126`,
+                AnimatorBox[Dynamic[$CellContext`i20$$], {1, 41, 1},
+                 AnimationRate->10.,
+                 AnimationRunTime->17.074417114257812`,
+                 AnimationTimeIndex->0.07642707824706996,
                  
                  AppearanceElements->{
                   "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
@@ -356,12 +500,11 @@ Cell[BoxData[
                "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
              "ListAnimateLabel",
              StripOnInput->False],
-            {"ControlArea", Top}],
+            {"ControlArea", Left}],
            Alignment->{Automatic, Inherited},
            StripOnInput->False],
           Background->None,
-          StripOnInput->False]},
-        {
+          StripOnInput->False], 
          ItemBox[
           TagBox[
            StyleBox[
@@ -370,483 +513,168 @@ Cell[BoxData[
               PaneSelectorBox[{1->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[1, 5], Rational[251, 5]}, {0.2, 50.2}], 1]},
+                 DiskBox[{2.4813433994895604, 50.44751276389724}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 2->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[2, 5], 50.38432}, {0.4, 50.38432}], 
-                  1]},
+                 DiskBox[{4.925744408581977, 50.791094269477185}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 3->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[3, 5], 50.552960000000006`}, {0.6, 
-                   50.552960000000006`}], 1]},
+                 DiskBox[{7.333753027816698, 51.0322918515908}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 4->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[4, 5], 50.705920000000006`}, {0.8, 
-                   50.705920000000006`}], 1]},
+                 DiskBox[{9.705911069291915, 51.17262980827434}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 5->
                GraphicsBox[
-                {GrayLevel[0], DiskBox[{1, 50.8432}, 1]},
+                {GrayLevel[0], 
+                 DiskBox[{12.04275227857454, 51.21360974372277}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 6->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[6, 5], 50.964800000000004`}, {1.2, 
-                   50.964800000000004`}], 1]},
+                 DiskBox[{14.344802454795342, 51.15671090615723}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 7->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[7, 5], 51.07072}, {1.4, 51.07072}], 
-                  1]},
+                 DiskBox[{16.612579568955766, 51.00339052066187}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 8->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[8, 5], 51.16096}, {1.6, 51.16096}], 
-                  1]},
+                 DiskBox[{18.84659388047379, 50.75508411706585}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 9->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[9, 5], 51.23552}, {1.8, 51.23552}], 
-                  1]},
+                 DiskBox[{21.047348051994305, 50.41320585294358}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 10->
                GraphicsBox[
-                {GrayLevel[0], DiskBox[{2, 51.2944}, 1]},
+                {GrayLevel[0], 
+                 DiskBox[{23.215337262490408, 49.9791488318059}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 11->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[11, 5], 51.3376}, {2.2, 51.3376}], 
-                  1]},
+                 DiskBox[{25.351049318680737, 49.45428541655468}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 12->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[12, 5], 51.365120000000005`}, {2.4, 
-                   51.365120000000005`}], 1]},
+                 DiskBox[{27.45496476478803, 48.83996753826983}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 13->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[13, 5], 51.376960000000004`}, {2.6, 
-                   51.376960000000004`}], 1]},
+                 DiskBox[{29.52755699066364, 48.13752700039987}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 14->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[14, 5], 51.37312000000001}, {2.8, 
-                   51.37312000000001}], 1]},
+                 DiskBox[{31.569292338302176, 47.34827577842293}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 15->
                GraphicsBox[
-                {GrayLevel[0], DiskBox[{3, 51.35360000000001}, 1]},
+                {GrayLevel[0], 
+                 DiskBox[{33.58063020677051, 46.47350631504719}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 16->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[16, 5], 51.318400000000004`}, {3.2, 
-                   51.318400000000004`}], 1]},
+                 DiskBox[{35.56202315557445, 45.5144918110156}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 17->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[17, 5], 51.267520000000005`}, {3.4, 
-                   51.267520000000005`}], 1]},
+                 DiskBox[{37.51391700648654, 44.47248651158151}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 18->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[18, 5], 51.20096}, {3.6, 51.20096}],
-                   1]},
+                 DiskBox[{39.43675094385783, 43.348725988719366}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 19->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[19, 5], 51.11872}, {3.8, 51.11872}],
-                   1]},
+                 DiskBox[{41.330957613436254, 42.14442741913331}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 20->
                GraphicsBox[
-                {GrayLevel[0], DiskBox[{4, 51.0208}, 1]},
+                {GrayLevel[0], 
+                 DiskBox[{43.19696321971371, 40.86078985812719}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 21->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[21, 5], 50.9072}, {4.2, 50.9072}], 
-                  1]},
+                 DiskBox[{45.03518762182388, 39.49899450939711}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 22->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[22, 5], 50.77792}, {4.4, 50.77792}],
-                   1]},
+                 DiskBox[{46.846044428012306, 38.06020499080722}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 23->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[23, 5], 50.632960000000004`}, {4.6, 
-                   50.632960000000004`}], 1]},
+                 DiskBox[{48.62994108870001, 36.54556759620857}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 24->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[24, 5], 50.47232}, {4.8, 50.47232}],
-                   1]},
+                 DiskBox[{50.3872789881615, 34.95621155336016}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 25->
                GraphicsBox[
-                {GrayLevel[0], DiskBox[{5, 50.29600000000001}, 1]},
+                {GrayLevel[0], 
+                 DiskBox[{52.11845353483798, 33.29324927800997}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 26->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[26, 5], 50.104000000000006`}, {5.2, 
-                   50.104000000000006`}], 1]},
+                 DiskBox[{53.8238542503059, 31.557776624193025}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 27->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[27, 5], 49.89632}, {5.4, 49.89632}],
-                   1]},
+                 DiskBox[{55.50386485692094, 29.750873130803313}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 28->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[28, 5], 49.67296}, {5.6, 49.67296}],
-                   1]},
+                 DiskBox[{57.1588633641572, 27.87360226449465}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 29->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[29, 5], 49.43392}, {5.8, 49.43392}],
-                   1]},
+                 DiskBox[{58.78922215366089, 25.927011658965}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 30->
                GraphicsBox[
-                {GrayLevel[0], DiskBox[{6, 49.1792}, 1]},
+                {GrayLevel[0], 
+                 DiskBox[{60.395308063037774, 23.912133350678573}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 31->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[31, 5], 48.9088}, {6.2, 48.9088}], 
-                  1]},
+                 DiskBox[{61.97748246839318, 21.829984011078466}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 32->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[32, 5], 48.62272}, {6.4, 48.62272}],
-                   1]},
+                 DiskBox[{63.53610136564318, 19.681565175341746}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 33->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[33, 5], 48.32096}, {6.6, 48.32096}],
-                   1]},
+                 DiskBox[{65.0715154506151, 17.467863467729444}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 34->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[34, 5], 48.00352}, {6.8, 48.00352}],
-                   1]},
+                 DiskBox[{66.58407019795565, 15.189850823580855}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 35->
                GraphicsBox[
-                {GrayLevel[0], DiskBox[{7, 47.6704}, 1]},
+                {GrayLevel[0], 
+                 DiskBox[{68.07410593886412, 12.848484708003355}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 36->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[36, 5], 47.321600000000004`}, {7.2, 
-                   47.321600000000004`}], 1]},
+                 DiskBox[{69.54195793766834, 10.44470833130589}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 37->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[37, 5], 46.95712}, {7.4, 46.95712}],
-                   1]},
+                 DiskBox[{70.98795646726062, 7.979450861225473}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 38->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[38, 5], 46.57696}, {7.6, 46.57696}],
-                   1]},
+                 DiskBox[{72.41242688341043, 5.453627631993584}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 39->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[39, 5], 46.18112}, {7.8, 46.18112}],
-                   1]},
+                 DiskBox[{73.81568969797097, 2.8681403502905027}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 40->
                GraphicsBox[
-                {GrayLevel[0], DiskBox[{8, 45.7696}, 1]},
+                {GrayLevel[0], 
+                 DiskBox[{75.19806065099554, 0.22387729813294754}, 1]},
                 PlotRange->{{0, 100}, {0, 100}}], 41->
                GraphicsBox[
                 {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[41, 5], 45.3424}, {8.2, 45.3424}], 
-                  1]},
-                PlotRange->{{0, 100}, {0, 100}}], 42->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[42, 5], 44.899519999999995`}, {8.4, 
-                   44.899519999999995`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 43->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[43, 5], 44.44096}, {8.6, 44.44096}],
-                   1]},
-                PlotRange->{{0, 100}, {0, 100}}], 44->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[44, 5], 43.966719999999995`}, {8.8, 
-                   43.966719999999995`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 45->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{9, 43.4768}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 46->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[46, 5], 42.971199999999996`}, {9.2, 
-                   42.971199999999996`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 47->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[47, 5], 42.44992}, {9.4, 42.44992}],
-                   1]},
-                PlotRange->{{0, 100}, {0, 100}}], 48->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[48, 5], 41.91296}, {9.6, 41.91296}],
-                   1]},
-                PlotRange->{{0, 100}, {0, 100}}], 49->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[49, 5], 41.36032}, {9.8, 41.36032}],
-                   1]},
-                PlotRange->{{0, 100}, {0, 100}}], 50->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{10, 40.792}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 51->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[51, 5], 40.208}, {10.2, 40.208}], 
-                  1]},
-                PlotRange->{{0, 100}, {0, 100}}], 52->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[52, 5], 39.60832}, {10.4, 39.60832}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 53->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[53, 5], 38.99296}, {10.6, 38.99296}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 54->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[54, 5], 38.36192}, {10.8, 38.36192}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 55->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{11, 37.715199999999996}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 56->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[56, 5], 37.0528}, {11.2, 37.0528}], 
-                  1]},
-                PlotRange->{{0, 100}, {0, 100}}], 57->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[57, 5], 36.374719999999996`}, {11.4, 
-                   36.374719999999996`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 58->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[58, 5], 35.68096}, {11.6, 35.68096}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 59->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[59, 5], 34.97152}, {11.8, 34.97152}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 60->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{12, 34.2464}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 61->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[NCache[{Rational[61, 5], 33.5056}, {12.2, 33.5056}], 
-                  1]},
-                PlotRange->{{0, 100}, {0, 100}}], 62->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[62, 5], 32.749120000000005`}, {12.4, 
-                   32.749120000000005`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 63->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[63, 5], 31.976960000000005`}, {12.6, 
-                   31.976960000000005`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 64->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[64, 5], 31.189120000000006`}, {12.8, 
-                   31.189120000000006`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 65->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{13, 30.385600000000007}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 66->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[66, 5], 29.56640000000001}, {13.2, 
-                   29.56640000000001}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 67->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[67, 5], 28.73152000000001}, {13.4, 
-                   28.73152000000001}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 68->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[68, 5], 27.880960000000012`}, {13.6, 
-                   27.880960000000012`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 69->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[69, 5], 27.01472000000001}, {13.8, 
-                   27.01472000000001}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 70->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{14, 26.13280000000001}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 71->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[71, 5], 25.23520000000001}, {14.2, 
-                   25.23520000000001}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 72->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[72, 5], 24.32192000000001}, {14.4, 
-                   24.32192000000001}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 73->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[73, 5], 23.39296000000001}, {14.6, 
-                   23.39296000000001}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 74->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[74, 5], 22.44832000000001}, {14.8, 
-                   22.44832000000001}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 75->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{15, 21.48800000000001}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 76->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[76, 5], 20.51200000000001}, {15.2, 
-                   20.51200000000001}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 77->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[77, 5], 19.520320000000012`}, {15.4, 
-                   19.520320000000012`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 78->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[78, 5], 18.512960000000014`}, {15.6, 
-                   18.512960000000014`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 79->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[79, 5], 17.489920000000016`}, {15.8, 
-                   17.489920000000016`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 80->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{16, 16.451200000000018}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 81->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[81, 5], 15.396800000000018`}, {16.2, 
-                   15.396800000000018`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 82->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[82, 5], 14.32672000000002}, {16.4, 
-                   14.32672000000002}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 83->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[83, 5], 13.24096000000002}, {16.6, 
-                   13.24096000000002}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 84->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[84, 5], 12.139520000000022`}, {16.8, 
-                   12.139520000000022`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 85->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{17, 11.022400000000022}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 86->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[86, 5], 9.889600000000023}, {17.2, 
-                   9.889600000000023}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 87->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[87, 5], 8.741120000000024}, {17.4, 
-                   8.741120000000024}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 88->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[88, 5], 7.576960000000025}, {17.6, 
-                   7.576960000000025}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 89->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[89, 5], 6.397120000000026}, {17.8, 
-                   6.397120000000026}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 90->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{18, 5.201600000000027}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 91->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[91, 5], 3.9904000000000277`}, {18.2, 
-                   3.9904000000000277`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 92->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[92, 5], 2.763520000000029}, {18.4, 
-                   2.763520000000029}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 93->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[93, 5], 1.52096000000003}, {18.6, 
-                   1.52096000000003}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 94->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[
-                  NCache[{Rational[94, 5], 0.26272000000003115`}, {18.8, 
-                   0.26272000000003115`}], 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 95->
-               GraphicsBox[
-                {GrayLevel[0], DiskBox[{19, -1.0111999999999677}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}]}, Dynamic[$CellContext`i33$$],
+                 DiskBox[{76.55985078178053, -2.4782864672586697}, 1]},
+                PlotRange->{{0, 100}, {0, 100}}]}, Dynamic[$CellContext`i20$$],
                Alignment->Automatic,
                BaseStyle->"ListAnimateCore",
                ImageSize->All,
@@ -896,15 +724,20 @@ Cell[BoxData[
    Deployed->True,
    StripOnInput->False],
   Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{3.8583748956570826`*^9, 3.858374947583156*^9, 
-  3.858375052836398*^9},
- CellLabel->"Out[84]=",ExpressionUUID->"bc727af7-c09b-4728-ab76-92223b731c2f"]
+ CellChangeTimes->{
+  3.8583748956570826`*^9, 3.858374947583156*^9, 3.858375052836398*^9, 
+   3.8584316351376038`*^9, 3.858431755810766*^9, 3.8584318611723166`*^9, {
+   3.8584319393402653`*^9, 3.858431963450288*^9}, {3.858431998916175*^9, 
+   3.8584320283282294`*^9}, 3.8584325339014363`*^9, {3.8584327406694245`*^9, 
+   3.8584327699235315`*^9}},
+ CellLabel->
+  "Out[271]=",ExpressionUUID->"adc016d2-2253-4121-97ef-0c36767b2405"]
 }, Open  ]]
 }, Open  ]]
 },
-WindowSize->{717., 624.75},
-WindowMargins->{{6, Automatic}, {Automatic, 39}},
-FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+WindowSize->{853.1999999999999, 568.8},
+WindowMargins->{{6, Automatic}, {Automatic, 0}},
+FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 19, 2020)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"630923aa-63f7-4495-b3e8-7a91c3fbffc5"
 ]
@@ -920,14 +753,18 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 226, 4, 98, "Title",ExpressionUUID->"fa4f4130-ff61-4e13-a456-3f5b24222716"],
+Cell[580, 22, 226, 4, 97, "Title",ExpressionUUID->"fa4f4130-ff61-4e13-a456-3f5b24222716"],
 Cell[809, 28, 193, 3, 53, "Subtitle",ExpressionUUID->"17c1235b-3906-47fe-b1de-8b80fbff5b58"],
 Cell[1005, 33, 218, 4, 28, "Input",ExpressionUUID->"221a16a5-2b2f-4672-b2d2-a625034f7bf6"],
-Cell[1226, 39, 3900, 83, 428, "Input",ExpressionUUID->"c9f097ed-017c-48d5-a517-c5406896bf61"],
-Cell[5129, 124, 2715, 78, 200, "Input",ExpressionUUID->"0b752553-d195-4532-9c3a-ee0bc62fb435"],
 Cell[CellGroupData[{
-Cell[7869, 206, 5035, 109, 295, "Input",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"],
-Cell[12907, 317, 24962, 583, 474, "Output",ExpressionUUID->"bc727af7-c09b-4728-ab76-92223b731c2f"]
+Cell[1248, 41, 8294, 196, 575, "Input",ExpressionUUID->"c9f097ed-017c-48d5-a517-c5406896bf61"],
+Cell[9545, 239, 333, 8, 32, "Output",ExpressionUUID->"f7516052-4ef1-4e13-bbb7-200b7bed1f08"],
+Cell[9881, 249, 511, 13, 32, "Output",ExpressionUUID->"f00d705b-a1e0-4ae5-a24c-ef09c65be454"]
+}, Open  ]],
+Cell[10407, 265, 2719, 79, 166, "Input",ExpressionUUID->"0b752553-d195-4532-9c3a-ee0bc62fb435"],
+Cell[CellGroupData[{
+Cell[13151, 348, 5118, 112, 283, "Input",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"],
+Cell[18272, 462, 11700, 271, 423, "Output",ExpressionUUID->"adc016d2-2253-4121-97ef-0c36767b2405"]
 }, Open  ]]
 }, Open  ]]
 }
