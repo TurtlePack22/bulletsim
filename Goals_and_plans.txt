@@ -18,4 +18,4 @@ by saturday:
 -mitch will create a description of the program and also include sliders for the user interface
 -Darian will create an animation that works well with {x,y},{x',y'}
 
-meet again saturday at 8am
+meet again saturday at 8am on zoom
