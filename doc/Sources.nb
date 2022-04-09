@@ -1,0 +1,233 @@
+(* Content-type: application/vnd.wolfram.mathematica *)
+
+(*** Wolfram Notebook File ***)
+(* http://www.wolfram.com/nb *)
+
+(* CreatedBy='Mathematica 13.0' *)
+
+(*CacheID: 234*)
+(* Internal cache information:
+NotebookFileLineBreakTest
+NotebookFileLineBreakTest
+NotebookDataPosition[       158,          7]
+NotebookDataLength[      7934,        223]
+NotebookOptionsPosition[      7238,        203]
+NotebookOutlinePosition[      7648,        219]
+CellTagsIndexPosition[      7605,        216]
+WindowFrame->Normal*)
+
+(* Beginning of Notebook Content *)
+Notebook[{
+
+Cell[CellGroupData[{
+Cell["Sources:", "Title",
+ CellChangeTimes->{{3.8585167276621385`*^9, 
+  3.8585167288482156`*^9}},ExpressionUUID->"0f1265da-d139-4414-9a30-\
+81b05e70eb26"],
+
+Cell[BoxData[
+ RowBox[{"\"\<\nSources:\n1. Wolfram Alpha Documentation: Dynamic\n2. Daily, \
+Kevin. \\\"Flappy Bird using the Wolfram Language\\\". \
+https://community.wolfram.com/groups/-/m/t/1127985\n3. Barthelet, Luc. \
+\\\"Introduction to DynamicsLearn to Build a Game\\\". \
+https://www.wolfram.com/broadcast/video.php?c=104&v=41\n\>\"", ";"}]], "Input",
+ CellChangeTimes->{{3.858509537547573*^9, 3.858509798168627*^9}, {
+  3.8585158678916883`*^9, 3.8585158799425297`*^9}, {3.8585167427336736`*^9, 
+  3.858516749442012*^9}},ExpressionUUID->"bc5fdf05-4749-4df9-b5c7-\
+8b0f30ec80f2"],
+
+Cell[BoxData[
+ RowBox[{"Framed", "@", 
+  RowBox[{"DynamicModule", "[", 
+   RowBox[{
+    RowBox[{"{", 
+     RowBox[{"contents", "=", 
+      RowBox[{"{", "}"}]}], "}"}], ",", 
+    RowBox[{"EventHandler", "[", 
+     RowBox[{
+      RowBox[{"Graphics", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"PointSize", "[", "0.1", "]"}], ",", 
+          RowBox[{"Point", "[", 
+           RowBox[{"Dynamic", "[", 
+            RowBox[{
+             RowBox[{"contents", "=", 
+              RowBox[{"Map", "[", 
+               RowBox[{
+                RowBox[{
+                 RowBox[{"If", "[", 
+                  RowBox[{
+                   RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "2"}], "]"}], "]"}], "\[GreaterEqual]", 
+                    "0"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "1", "]"}], "]"}], "-", 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}], ",", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}], "+", 
+                    RowBox[{"{", 
+                    RowBox[{"0", ",", "0.001"}], "}"}]}]}], "}"}], ",", 
+                   RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", 
+                    RowBox[{"1", ",", "1"}], "]"}], "]"}], ",", "0"}], "}"}], 
+                    ",", 
+                    RowBox[{
+                    RowBox[{"{", 
+                    RowBox[{"1", ",", 
+                    RowBox[{"-", "0.8"}]}], "}"}], 
+                    RowBox[{"#", "[", 
+                    RowBox[{"[", "2", "]"}], "]"}]}]}], "}"}]}], "]"}], "&"}],
+                 ",", "contents"}], "]"}]}], ";", 
+             RowBox[{"Map", "[", 
+              RowBox[{"First", ",", "contents"}], "]"}]}], "]"}], "]"}]}], 
+         "}"}], ",", 
+        RowBox[{"PlotRange", "\[Rule]", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "1"}], "}"}]}], "}"}]}]}], "]"}], ",", 
+      RowBox[{"\"\<MouseDown\>\"", "\[RuleDelayed]", 
+       RowBox[{"(", 
+        RowBox[{"AppendTo", "[", 
+         RowBox[{"contents", ",", 
+          RowBox[{"{", 
+           RowBox[{
+            RowBox[{"MousePosition", "[", "\"\<Graphics\>\"", "]"}], ",", 
+            RowBox[{"{", 
+             RowBox[{"0", ",", "0"}], "}"}]}], "}"}]}], "]"}], ")"}]}]}], 
+     "]"}]}], "]"}]}]], "Input",
+ CellLabel->"In[1]:=",
+ CellID->467528175,ExpressionUUID->"d0ea7ed6-ae40-4f76-8f97-ee722a899422"],
+
+Cell[BoxData[
+ RowBox[{"DynamicModule", "[", 
+  RowBox[{
+   RowBox[{"{", 
+    RowBox[{"task", ",", 
+     RowBox[{"pos", "=", "0"}], ",", 
+     RowBox[{"vel", "=", "0"}], ",", 
+     RowBox[{"fps", "=", "30"}], ",", 
+     RowBox[{"gravity", "=", "100"}], ",", 
+     RowBox[{"kick", "=", "10"}]}], "}"}], ",", 
+   RowBox[{"Column", "[", 
+    RowBox[{"{", 
+     RowBox[{
+      RowBox[{"Graphics", "[", 
+       RowBox[{
+        RowBox[{"{", 
+         RowBox[{
+          RowBox[{"Line", "[", 
+           RowBox[{"{", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{
+               RowBox[{"-", "5"}], ",", 
+               RowBox[{"-", "1"}]}], "}"}], ",", 
+             RowBox[{"{", 
+              RowBox[{"5", ",", 
+               RowBox[{"-", "1"}]}], "}"}]}], "}"}], "]"}], ",", 
+          RowBox[{"Dynamic", "[", 
+           RowBox[{"Circle", "[", 
+            RowBox[{
+             RowBox[{"{", 
+              RowBox[{"5", ",", "pos"}], "}"}], ",", "0.5"}], "]"}], "]"}]}], 
+         "}"}], ",", 
+        RowBox[{"Frame", "->", "True"}], ",", 
+        RowBox[{"PlotRange", "->", 
+         RowBox[{"{", 
+          RowBox[{
+           RowBox[{"{", 
+            RowBox[{"0", ",", "10"}], "}"}], ",", 
+           RowBox[{"{", 
+            RowBox[{"0", ",", "14"}], "}"}]}], "}"}]}], ",", 
+        RowBox[{"ImageSize", "->", "485"}]}], "]"}], ",", 
+      RowBox[{"Button", "[", 
+       RowBox[{"\"\<JUMP\>\"", ",", 
+        RowBox[{"vel", "=", 
+         RowBox[{"kick", "/", "fps"}]}]}], "]"}], ",", 
+      RowBox[{"Dynamic", "[", 
+       RowBox[{"{", 
+        RowBox[{"pos", ",", "vel"}], "}"}], "]"}], ",", 
+      RowBox[{"LabeledSlider", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "[", "gravity", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"100", ",", "3000"}], "}"}]}], "]"}], ",", 
+      RowBox[{"LabeledSlider", "[", 
+       RowBox[{
+        RowBox[{"Dynamic", "[", "kick", "]"}], ",", 
+        RowBox[{"{", 
+         RowBox[{"1", ",", "1500"}], "}"}]}], "]"}]}], "}"}], "]"}], ",", 
+   RowBox[{"Initialization", ":>", 
+    RowBox[{"(", 
+     RowBox[{
+      RowBox[{"task", "=", 
+       RowBox[{"CreateScheduledTask", "[", 
+        RowBox[{
+         RowBox[{
+          RowBox[{"vel", "-=", 
+           RowBox[{
+            RowBox[{"gravity", "/", "fps"}], "/", "fps"}]}], ";", 
+          "\[IndentingNewLine]", 
+          RowBox[{"pos", "+=", 
+           RowBox[{
+            RowBox[{"1", "/", "2"}], " ", 
+            RowBox[{"vel", "/", "fps"}]}]}], ";", "\[IndentingNewLine]", 
+          RowBox[{"If", "[", 
+           RowBox[{
+            RowBox[{"pos", "<", "0"}], ",", 
+            RowBox[{"vel", "=", 
+             RowBox[{"pos", "=", "0"}]}]}], "]"}], ";"}], ",", 
+         RowBox[{"1.", "/", "fps"}]}], "]"}]}], ";", "\[IndentingNewLine]", 
+      RowBox[{"StartScheduledTask", "[", "task", "]"}], ";"}], ")"}]}]}], 
+  "]"}]], "Input",
+ CellChangeTimes->{{3.8585167684892435`*^9, 
+  3.8585167684997454`*^9}},ExpressionUUID->"c0a29eba-ad29-44cc-aac0-\
+f5b47493f4f5"]
+}, Open  ]]
+},
+WindowSize->{720.75, 735.75},
+WindowMargins->{{Automatic, 301.5}, {Automatic, 33}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
+StyleDefinitions->"Default.nb",
+ExpressionUUID->"da1bb5c5-4b7f-4a0e-be04-dca7fee58e68"
+]
+(* End of Notebook Content *)
+
+(* Internal cache information *)
+(*CellTagsOutline
+CellTagsIndex->{}
+*)
+(*CellTagsIndex
+CellTagsIndex->{}
+*)
+(*NotebookFileOutline
+Notebook[{
+Cell[CellGroupData[{
+Cell[580, 22, 155, 3, 98, "Title",ExpressionUUID->"0f1265da-d139-4414-9a30-81b05e70eb26"],
+Cell[738, 27, 586, 9, 162, "Input",ExpressionUUID->"bc5fdf05-4749-4df9-b5c7-8b0f30ec80f2"],
+Cell[1327, 38, 2881, 76, 181, "Input",ExpressionUUID->"d0ea7ed6-ae40-4f76-8f97-ee722a899422",
+ CellID->467528175],
+Cell[4211, 116, 3011, 84, 200, "Input",ExpressionUUID->"c0a29eba-ad29-44cc-aac0-f5b47493f4f5"]
+}, Open  ]]
+}
+]
+*)
+
+(* End of internal cache information *)
+
