@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     31227,        765]
-NotebookOptionsPosition[     30000,        737]
-NotebookOutlinePosition[     30412,        753]
-CellTagsIndexPosition[     30369,        750]
+NotebookDataLength[     18255,        453]
+NotebookOptionsPosition[     17390,        432]
+NotebookOutlinePosition[     17796,        448]
+CellTagsIndexPosition[     17753,        445]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -36,8 +36,6 @@ Cell[BoxData[
  CellChangeTimes->{{3.8582070896962967`*^9, 3.858207092312795*^9}},
  CellLabel->
   "In[137]:=",ExpressionUUID->"221a16a5-2b2f-4672-b2d2-a625034f7bf6"],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[
  RowBox[{
@@ -93,32 +91,34 @@ Cell[BoxData[
      RowBox[{"kg", ".", " ", "c"}], " ", "is", " ", "a", " ", "constant", " ",
       "for", " ", "air", " ", 
      RowBox[{"resistance", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
-   RowBox[{"PositionX", "=", 
-    RowBox[{"Integrate", "[", 
-     RowBox[{
-      RowBox[{"xVel", "*", 
-       RowBox[{"Exp", "[", 
-        RowBox[{
-         RowBox[{"-", "g"}], "*", 
-         RowBox[{"t", "/", "Vt"}]}], "]"}]}], ",", "t"}], "]"}]}], 
-   "\[IndentingNewLine]", 
-   RowBox[{"PositionY", "=", 
-    RowBox[{"Integrate", "[", 
-     RowBox[{
+   RowBox[{
+    RowBox[{"PositionX", "=", 
+     RowBox[{"Integrate", "[", 
       RowBox[{
-       RowBox[{"yVel", "*", 
+       RowBox[{"xVel", "*", 
         RowBox[{"Exp", "[", 
          RowBox[{
           RowBox[{"-", "g"}], "*", 
-          RowBox[{"t", "/", "Vt"}]}], "]"}]}], "-", 
-       RowBox[{"Vt", 
-        RowBox[{"(", 
-         RowBox[{"1", "-", 
-          RowBox[{"Exp", "[", 
-           RowBox[{
-            RowBox[{"-", "g"}], "*", 
-            RowBox[{"t", "/", "Vt"}]}], "]"}]}], ")"}]}]}], ",", "t"}], 
-     "]"}]}], "\[IndentingNewLine]", 
+          RowBox[{"t", "/", "Vt"}]}], "]"}]}], ",", "t"}], "]"}]}], ";"}], 
+   "\[IndentingNewLine]", 
+   RowBox[{
+    RowBox[{"PositionY", "=", 
+     RowBox[{"Integrate", "[", 
+      RowBox[{
+       RowBox[{
+        RowBox[{"yVel", "*", 
+         RowBox[{"Exp", "[", 
+          RowBox[{
+           RowBox[{"-", "g"}], "*", 
+           RowBox[{"t", "/", "Vt"}]}], "]"}]}], "-", 
+        RowBox[{"Vt", 
+         RowBox[{"(", 
+          RowBox[{"1", "-", 
+           RowBox[{"Exp", "[", 
+            RowBox[{
+             RowBox[{"-", "g"}], "*", 
+             RowBox[{"t", "/", "Vt"}]}], "]"}]}], ")"}]}]}], ",", "t"}], 
+      "]"}]}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
     RowBox[{"jonahsFunctionForX", "[", 
      RowBox[{"x_", ",", "y_", ",", "u_", ",", "v_"}], "]"}], ":=", 
@@ -192,10 +192,7 @@ Cell[BoxData[
    RowBox[{
     RowBox[{"startu", "=", "25"}], ";"}], "\[IndentingNewLine]", 
    RowBox[{
-    RowBox[{"startv", "=", "5"}], ";"}], "\[IndentingNewLine]", 
-   RowBox[{
-    RowBox[{"dt", "=", 
-     RowBox[{"1", "/", "25"}]}], ";"}], "\[IndentingNewLine]"}]}]], "Input",
+    RowBox[{"startv", "=", "5"}], ";"}], "\[IndentingNewLine]"}]}]], "Input",
  CellChangeTimes->{{3.8582059318866997`*^9, 3.858206015378581*^9}, {
    3.8582060682345176`*^9, 3.858206076776741*^9}, {3.858206125188794*^9, 
    3.8582061284946575`*^9}, {3.8582072423605347`*^9, 3.858207354025297*^9}, {
@@ -233,35 +230,9 @@ Cell[BoxData[
    3.858432358823919*^9}, {3.858432422257346*^9, 3.8584325216592765`*^9}, {
    3.858432580620381*^9, 3.858432602708372*^9}, {3.8584326382070827`*^9, 
    3.8584326707006226`*^9}, {3.8584327083457985`*^9, 3.858432732758385*^9}, {
-   3.8584327870854654`*^9, 
-   3.8584327958209066`*^9}},ExpressionUUID->"c9f097ed-017c-48d5-a517-\
+   3.8584327870854654`*^9, 3.8584327958209066`*^9}, {3.858505580392779*^9, 
+   3.8585055955111103`*^9}},ExpressionUUID->"c9f097ed-017c-48d5-a517-\
 c5406896bf61"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{"-", "6.666666666666667`"}], " ", 
-  SuperscriptBox["\[ExponentialE]", 
-   RowBox[{
-    RowBox[{"-", "0.15`"}], " ", "t"}]], " ", "xVel"}]], "Output",
- CellChangeTimes->{3.858432528678309*^9, 3.8584327354173717`*^9},
- CellLabel->
-  "Out[251]=",ExpressionUUID->"f7516052-4ef1-4e13-bbb7-200b7bed1f08"],
-
-Cell[BoxData[
- RowBox[{
-  RowBox[{
-   RowBox[{"-", "65.33333333333334`"}], " ", "t"}], "-", 
-  RowBox[{"6.666666666666667`", " ", 
-   SuperscriptBox["\[ExponentialE]", 
-    RowBox[{
-     RowBox[{"-", "0.15`"}], " ", "t"}]], " ", 
-   RowBox[{"(", 
-    RowBox[{"65.33333333333334`", "\[VeryThinSpace]", "+", 
-     RowBox[{"1.`", " ", "yVel"}]}], ")"}]}]}]], "Output",
- CellChangeTimes->{3.858432528678309*^9, 3.85843273550182*^9},
- CellLabel->
-  "Out[252]=",ExpressionUUID->"f00d705b-a1e0-4ae5-a24c-ef09c65be454"]
-}, Open  ]],
 
 Cell[BoxData[
  RowBox[{
@@ -343,8 +314,6 @@ Cell[BoxData[
  CellChangeTimes->{{3.8583742591844378`*^9, 3.8583742604541817`*^9}},
  CellLabel->
   "In[266]:=",ExpressionUUID->"0b752553-d195-4532-9c3a-ee0bc62fb435"],
-
-Cell[CellGroupData[{
 
 Cell[BoxData[{
  RowBox[{
@@ -458,286 +427,12 @@ Cell[BoxData[{
    3.85837490196423*^9, {3.858374942761856*^9, 3.8583749470089827`*^9}, {
    3.858431744340681*^9, 3.858431746975345*^9}},
  CellLabel->
-  "In[269]:=",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"],
-
-Cell[BoxData[
- TagBox[
-  StyleBox[
-   DynamicModuleBox[{$CellContext`i20$$ = 1, Typeset`show$$ = True, 
-    Typeset`bookmarkList$$ = {
-    "\"min\"" :> {$CellContext`i20$$ = 1}, 
-     "\"max\"" :> {$CellContext`i20$$ = 41}}, Typeset`bookmarkMode$$ = "Menu",
-     Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
-    "\"untitled\"", Typeset`specs$$ = {{{
-       Hold[$CellContext`i20$$], 1, ""}, 1, 41, 1}}, Typeset`size$$ = 
-    Automatic, Typeset`update$$ = 0, Typeset`initDone$$, 
-    Typeset`skipInitDone$$ = True}, 
-    PaneBox[
-     PanelBox[GridBox[{
-        {
-         ItemBox[
-          ItemBox[
-           TagBox[
-            StyleBox[GridBox[{
-               {"\<\"\"\>", 
-                AnimatorBox[Dynamic[$CellContext`i20$$], {1, 41, 1},
-                 AnimationRate->10.,
-                 AnimationRunTime->17.074417114257812`,
-                 AnimationTimeIndex->0.07642707824706996,
-                 
-                 AppearanceElements->{
-                  "ProgressSlider", "PlayPauseButton", "FasterSlowerButtons", 
-                   "DirectionButton"},
-                 AutoAction->False,
-                 DisplayAllSteps->True]}
-              },
-              AutoDelete->False,
-              
-              GridBoxAlignment->{
-               "Columns" -> {Right, {Left}}, "Rows" -> {{Baseline}}},
-              
-              GridBoxItemSize->{
-               "Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}], 
-             "ListAnimateLabel",
-             StripOnInput->False],
-            {"ControlArea", Left}],
-           Alignment->{Automatic, Inherited},
-           StripOnInput->False],
-          Background->None,
-          StripOnInput->False], 
-         ItemBox[
-          TagBox[
-           StyleBox[
-            PaneBox[
-             TagBox[
-              PaneSelectorBox[{1->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{2.4813433994895604, 50.44751276389724}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 2->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{4.925744408581977, 50.791094269477185}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 3->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{7.333753027816698, 51.0322918515908}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 4->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{9.705911069291915, 51.17262980827434}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 5->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{12.04275227857454, 51.21360974372277}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 6->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{14.344802454795342, 51.15671090615723}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 7->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{16.612579568955766, 51.00339052066187}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 8->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{18.84659388047379, 50.75508411706585}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 9->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{21.047348051994305, 50.41320585294358}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 10->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{23.215337262490408, 49.9791488318059}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 11->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{25.351049318680737, 49.45428541655468}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 12->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{27.45496476478803, 48.83996753826983}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 13->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{29.52755699066364, 48.13752700039987}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 14->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{31.569292338302176, 47.34827577842293}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 15->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{33.58063020677051, 46.47350631504719}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 16->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{35.56202315557445, 45.5144918110156}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 17->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{37.51391700648654, 44.47248651158151}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 18->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{39.43675094385783, 43.348725988719366}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 19->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{41.330957613436254, 42.14442741913331}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 20->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{43.19696321971371, 40.86078985812719}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 21->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{45.03518762182388, 39.49899450939711}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 22->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{46.846044428012306, 38.06020499080722}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 23->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{48.62994108870001, 36.54556759620857}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 24->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{50.3872789881615, 34.95621155336016}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 25->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{52.11845353483798, 33.29324927800997}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 26->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{53.8238542503059, 31.557776624193025}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 27->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{55.50386485692094, 29.750873130803313}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 28->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{57.1588633641572, 27.87360226449465}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 29->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{58.78922215366089, 25.927011658965}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 30->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{60.395308063037774, 23.912133350678573}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 31->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{61.97748246839318, 21.829984011078466}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 32->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{63.53610136564318, 19.681565175341746}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 33->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{65.0715154506151, 17.467863467729444}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 34->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{66.58407019795565, 15.189850823580855}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 35->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{68.07410593886412, 12.848484708003355}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 36->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{69.54195793766834, 10.44470833130589}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 37->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{70.98795646726062, 7.979450861225473}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 38->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{72.41242688341043, 5.453627631993584}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 39->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{73.81568969797097, 2.8681403502905027}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 40->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{75.19806065099554, 0.22387729813294754}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}], 41->
-               GraphicsBox[
-                {GrayLevel[0], 
-                 DiskBox[{76.55985078178053, -2.4782864672586697}, 1]},
-                PlotRange->{{0, 100}, {0, 100}}]}, Dynamic[$CellContext`i20$$],
-               Alignment->Automatic,
-               BaseStyle->"ListAnimateCore",
-               ImageSize->All,
-               TransitionDirection->Horizontal,
-               TransitionDuration->0.5,
-               TransitionEffect->Automatic],
-              Identity,
-              Editable->True,
-              Selectable->True],
-             ImageMargins->10],
-            Deployed->False,
-            StripOnInput->False,
-            ScriptLevel->0,
-            GraphicsBoxOptions->{PreserveImageOptions->True},
-            Graphics3DBoxOptions->{PreserveImageOptions->True}],
-           Identity,
-           Editable->False,
-           Selectable->False],
-          Alignment->{Left, Center},
-          Background->GrayLevel[1],
-          Frame->1,
-          FrameStyle->GrayLevel[0, 0.2],
-          ItemSize->Automatic,
-          StripOnInput->False]}
-       },
-       AutoDelete->False,
-       GridBoxAlignment->{"Columns" -> {{Left}}, "Rows" -> {{Top}}},
-       GridBoxDividers->{"Columns" -> {{False}}, "Rows" -> {{False}}},
-       GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}},
-       GridBoxSpacings->{"Columns" -> {
-           Offset[0.7], {
-            Offset[0.5599999999999999]}, 
-           Offset[0.7]}, "Rows" -> {
-           Offset[0.4], {
-            Offset[0.8]}, 
-           Offset[0.4]}}],
-      DefaultBaseStyle->{},
-      FrameMargins->{{5, 5}, {5, 5}}],
-     BaselinePosition->Automatic,
-     ImageMargins->0],
-    Deinitialization:>None,
-    DynamicModuleValues:>{},
-    SynchronousInitialization->True,
-    UndoTrackedVariables:>{Typeset`show$$, Typeset`bookmarkMode$$},
-    UnsavedVariables:>{Typeset`initDone$$},
-    UntrackedVariables:>{Typeset`size$$}], "ListAnimate",
-   Deployed->True,
-   StripOnInput->False],
-  Manipulate`InterpretManipulate[1]]], "Output",
- CellChangeTimes->{
-  3.8583748956570826`*^9, 3.858374947583156*^9, 3.858375052836398*^9, 
-   3.8584316351376038`*^9, 3.858431755810766*^9, 3.8584318611723166`*^9, {
-   3.8584319393402653`*^9, 3.858431963450288*^9}, {3.858431998916175*^9, 
-   3.8584320283282294`*^9}, 3.8584325339014363`*^9, {3.8584327406694245`*^9, 
-   3.8584327699235315`*^9}},
- CellLabel->
-  "Out[271]=",ExpressionUUID->"adc016d2-2253-4121-97ef-0c36767b2405"]
-}, Open  ]]
+  "In[269]:=",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"]
 }, Open  ]]
 },
-WindowSize->{853.1999999999999, 568.8},
-WindowMargins->{{6, Automatic}, {Automatic, 0}},
-FrontEndVersion->"12.1 for Microsoft Windows (64-bit) (June 19, 2020)",
+WindowSize->{718.5, 741.},
+WindowMargins->{{-5.25, Automatic}, {Automatic, 0}},
+FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
 StyleDefinitions->"Default.nb",
 ExpressionUUID->"630923aa-63f7-4495-b3e8-7a91c3fbffc5"
 ]
@@ -753,19 +448,12 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 226, 4, 97, "Title",ExpressionUUID->"fa4f4130-ff61-4e13-a456-3f5b24222716"],
+Cell[580, 22, 226, 4, 98, "Title",ExpressionUUID->"fa4f4130-ff61-4e13-a456-3f5b24222716"],
 Cell[809, 28, 193, 3, 53, "Subtitle",ExpressionUUID->"17c1235b-3906-47fe-b1de-8b80fbff5b58"],
 Cell[1005, 33, 218, 4, 28, "Input",ExpressionUUID->"221a16a5-2b2f-4672-b2d2-a625034f7bf6"],
-Cell[CellGroupData[{
-Cell[1248, 41, 8294, 196, 575, "Input",ExpressionUUID->"c9f097ed-017c-48d5-a517-c5406896bf61"],
-Cell[9545, 239, 333, 8, 32, "Output",ExpressionUUID->"f7516052-4ef1-4e13-bbb7-200b7bed1f08"],
-Cell[9881, 249, 511, 13, 32, "Output",ExpressionUUID->"f00d705b-a1e0-4ae5-a24c-ef09c65be454"]
-}, Open  ]],
-Cell[10407, 265, 2719, 79, 166, "Input",ExpressionUUID->"0b752553-d195-4532-9c3a-ee0bc62fb435"],
-Cell[CellGroupData[{
-Cell[13151, 348, 5118, 112, 283, "Input",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"],
-Cell[18272, 462, 11700, 271, 423, "Output",ExpressionUUID->"adc016d2-2253-4121-97ef-0c36767b2405"]
-}, Open  ]]
+Cell[1226, 39, 8305, 195, 581, "Input",ExpressionUUID->"c9f097ed-017c-48d5-a517-c5406896bf61"],
+Cell[9534, 236, 2719, 79, 200, "Input",ExpressionUUID->"0b752553-d195-4532-9c3a-ee0bc62fb435"],
+Cell[12256, 317, 5118, 112, 295, "Input",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"]
 }, Open  ]]
 }
 ]
