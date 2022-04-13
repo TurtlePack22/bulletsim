@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[     34885,        847]
-NotebookOptionsPosition[     33469,        817]
-NotebookOutlinePosition[     33877,        833]
-CellTagsIndexPosition[     33834,        830]
+NotebookDataLength[     32481,        785]
+NotebookOptionsPosition[     31196,        758]
+NotebookOutlinePosition[     31604,        774]
+CellTagsIndexPosition[     31561,        771]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -154,13 +154,14 @@ Cell[BoxData[
       RowBox[{"{", 
        RowBox[{
         RowBox[{"m", "\[Rule]", "mass"}], ",", 
-        RowBox[{"c", "\[Rule]", "drag"}]}], "}"}]}]}], ";", 
-    RowBox[{"(*", " ", 
-     RowBox[{
-     "Terminal", " ", "velocity", " ", "using", " ", "mass", " ", "in", " ", 
-      RowBox[{"kg", ".", " ", "c"}], " ", "is", " ", "a", " ", "constant", 
-      " ", "for", " ", "air", " ", 
-      RowBox[{"resistance", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+        RowBox[{"c", "\[Rule]", "drag"}]}], "}"}]}]}], ";"}], 
+   RowBox[{"(*", " ", 
+    RowBox[{
+    "Terminal", " ", "velocity", " ", "using", " ", "mass", " ", "in", " ", 
+     RowBox[{"kg", ".", " ", "c"}], " ", "is", " ", "a", " ", "constant", " ",
+      "for", " ", "air", " ", 
+     RowBox[{"resistance", "."}]}], " ", "*)"}], "\[IndentingNewLine]", 
+   RowBox[{
     RowBox[{"PositionX", "=", 
      RowBox[{"Integrate", "[", 
       RowBox[{
@@ -633,69 +634,9 @@ Cell[BoxData[
    3.8587950262481976`*^9, 3.85879503086874*^9}},
  CellLabel->"In[32]:=",ExpressionUUID->"d1e26d9e-3dfc-44d0-bef4-91b0ddc11619"],
 
-Cell[CellGroupData[{
-
 Cell[BoxData["bulletSim"], "Input",
  CellChangeTimes->{{3.8585166377485776`*^9, 3.8585166404198737`*^9}},
  CellLabel->"In[36]:=",ExpressionUUID->"837ef91f-bec5-4f1b-bc48-ea9c525a5ce4"],
-
-Cell[BoxData[
- DynamicModuleBox[{$CellContext`task$$ = ScheduledTaskObject[7, 
-   HoldForm[$CellContext`contents$$ = Map[If[Part[#, 1, 2] >= 0, 
-        $CellContext`NextXYV[
-         Part[#, 1], 
-         Part[#, 2]], {{
-          Part[#, 1, 1], 0}, {1, -$CellContext`bounce} 
-         Part[#, 2]}]& , $CellContext`contents$$]; Null], {
-   0.041666666666666664`, 
-    DirectedInfinity[1]}, Automatic, False, "AutoRemove" -> False, 
-   "EpilogFunction" :> Null, "TaskGroup" -> "Global`"], $CellContext`xy$$ = {
-  1, 10}, $CellContext`v$$ = {
-  5 2^Rational[1, 2], 5 
-   2^Rational[1, 2]}, $CellContext`contents$$ = {{{6.847222222222221, 
-    15.402777777777782`}, {5 2^Rational[1, 2], 5 2^Rational[1, 2]}}}}, 
-  TagBox[GridBox[{
-     {
-      FrameBox[
-       TagBox[
-        GraphicsBox[
-         {PointSize[
-           NCache[
-            Rational[1, 20], 0.05]], 
-          PointBox[Dynamic[Map[First, $CellContext`contents$$]]]},
-         ImageSize->Medium,
-         PlotRange->{{0, 20}, {0, 20}}],
-        EventHandlerTag[{"MouseDown" :> AppendTo[$CellContext`contents$$, {
-             MousePosition[
-             "Graphics"], {$CellContext`startvx, $CellContext`startvy}}], 
-          Method -> "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> 
-          True}]],
-       StripOnInput->False]},
-     {
-      ButtonBox["\<\"Reset\"\>",
-       Appearance->Automatic,
-       ButtonFunction:>($CellContext`contents$$ = {}),
-       Evaluator->Automatic,
-       Method->"Preemptive"]},
-     {""}
-    },
-    DefaultBaseStyle->"Column",
-    GridBoxAlignment->{"Columns" -> {{Left}}},
-    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-   "Column"],
-  DynamicModuleValues:>{},
-  Initialization:>($CellContext`task$$ = 
-    CreateScheduledTask[$CellContext`contents$$ = Map[If[Part[#, 1, 2] >= 0, 
-          $CellContext`NextXYV[
-           Part[#, 1], 
-           Part[#, 2]], {{
-            Part[#, 1, 1], 0}, {1, -$CellContext`bounce} 
-           Part[#, 2]}]& , $CellContext`contents$$]; Null, 
-      1./$CellContext`fps]; StartScheduledTask[$CellContext`task$$]; 
-   Null)]], "Output",
- CellChangeTimes->{3.8588186374275975`*^9},
- CellLabel->"Out[36]=",ExpressionUUID->"d0c11139-c9ba-4fe0-9f64-36c916738983"]
-}, Open  ]],
 
 Cell[BoxData[
  RowBox[{"(*", 
@@ -839,15 +780,12 @@ Cell[CellGroupData[{
 Cell[1027, 35, 372, 6, 48, "Input",ExpressionUUID->"221a16a5-2b2f-4672-b2d2-a625034f7bf6"],
 Cell[1402, 43, 219, 3, 32, "Output",ExpressionUUID->"9975ad07-ad4b-4482-8b60-a845cc319084"]
 }, Open  ]],
-Cell[1636, 49, 11786, 272, 733, "Input",ExpressionUUID->"c9f097ed-017c-48d5-a517-c5406896bf61"],
-Cell[13425, 323, 2794, 78, 105, "Input",ExpressionUUID->"0b752553-d195-4532-9c3a-ee0bc62fb435"],
-Cell[16222, 403, 4812, 115, 371, "Input",ExpressionUUID->"76b25247-c715-4bf4-a791-b753000dc6ca"],
-Cell[21037, 520, 4452, 113, 162, "Input",ExpressionUUID->"d1e26d9e-3dfc-44d0-bef4-91b0ddc11619"],
-Cell[CellGroupData[{
-Cell[25514, 637, 184, 2, 28, "Input",ExpressionUUID->"837ef91f-bec5-4f1b-bc48-ea9c525a5ce4"],
-Cell[25701, 641, 2244, 55, 434, "Output",ExpressionUUID->"d0c11139-c9ba-4fe0-9f64-36c916738983"]
-}, Open  ]],
-Cell[27960, 699, 5493, 115, 276, "Input",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"]
+Cell[1636, 49, 11794, 273, 733, "Input",ExpressionUUID->"c9f097ed-017c-48d5-a517-c5406896bf61"],
+Cell[13433, 324, 2794, 78, 105, "Input",ExpressionUUID->"0b752553-d195-4532-9c3a-ee0bc62fb435"],
+Cell[16230, 404, 4812, 115, 371, "Input",ExpressionUUID->"76b25247-c715-4bf4-a791-b753000dc6ca"],
+Cell[21045, 521, 4452, 113, 162, "Input",ExpressionUUID->"d1e26d9e-3dfc-44d0-bef4-91b0ddc11619"],
+Cell[25500, 636, 184, 2, 28, "Input",ExpressionUUID->"837ef91f-bec5-4f1b-bc48-ea9c525a5ce4"],
+Cell[25687, 640, 5493, 115, 276, "Input",ExpressionUUID->"ccbbb1e1-bcbd-40da-8964-e436f3c2eef9"]
 }, Open  ]]
 }
 ]
