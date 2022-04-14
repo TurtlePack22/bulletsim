@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   1510553,      24888]
-NotebookOptionsPosition[   1509473,      24862]
-NotebookOutlinePosition[   1509952,      24880]
-CellTagsIndexPosition[   1509909,      24877]
+NotebookDataLength[   1514638,      24942]
+NotebookOptionsPosition[   1513554,      24916]
+NotebookOutlinePosition[   1514031,      24934]
+CellTagsIndexPosition[   1513988,      24931]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -60,14 +60,11 @@ have 4.5kg of mass (10Lbs)\>\"", "]"}], ";", "\[IndentingNewLine]",
       "\[IndentingNewLine]", "\[IndentingNewLine]", 
       RowBox[{"(*", 
        RowBox[{
-       "initializes", " ", "and", " ", "then", " ", "creates", " ", "a", " ", 
-        "list", " ", "of", " ", "variables", " ", "to", " ", "be", " ", 
-        "used", " ", "in", " ", 
-        RowBox[{"Jonah", "'"}], "s", " ", "function"}], "*)"}], 
+       "list", " ", "outputted", " ", "that", " ", "contains", " ", "all", 
+        " ", "the", " ", "UI", " ", "and", " ", "dynamically", " ", "updates",
+         " ", "variables", " ", "to", " ", "be", " ", "called", " ", "in", 
+        " ", "bulletsim"}], "*)"}], "\[IndentingNewLine]", 
       "\[IndentingNewLine]", 
-      RowBox[{"inputvelocity", "=", "0"}], ";", "\[IndentingNewLine]", 
-      RowBox[{"inputheight", "=", "0"}], ";", "\[IndentingNewLine]", 
-      RowBox[{"inputmass", "=", "0"}], ";", "\[IndentingNewLine]", 
       RowBox[{"infolist", "=", 
        RowBox[{"{", "\[IndentingNewLine]", "\[IndentingNewLine]", 
         RowBox[{"(*", 
@@ -90,9 +87,9 @@ have 4.5kg of mass (10Lbs)\>\"", "]"}], ";", "\[IndentingNewLine]",
                    RowBox[{
                     RowBox[{"{", 
                     RowBox[{
-                    "inputvelocity", ",", "0", ",", " ", 
-                    "\"\<Input Velocity =\>\""}], "}"}], ",", "0", ",", 
-                    "soundbarrier", ",", ".1"}], "}"}], "]"}], ",", 
+                    "inputvelocity", ",", "0.01", ",", " ", 
+                    "\"\<Input velocity =\>\""}], "}"}], ",", "0.01", ",", 
+                    "soundbarrier", ",", "0.01"}], "}"}], "]"}], ",", 
                  RowBox[{"Spacer", "[", "5", "]"}], ",", 
                  RowBox[{"Dynamic", "[", "inputvelocity", "]"}], ",", 
                  RowBox[{"Spacer", "[", "2", "]"}], ",", 
@@ -112,9 +109,9 @@ have 4.5kg of mass (10Lbs)\>\"", "]"}], ";", "\[IndentingNewLine]",
                    RowBox[{
                     RowBox[{"{", 
                     RowBox[{
-                    "inputheight", ",", "0", ",", " ", 
-                    "\"\<Input height =\>\""}], "}"}], ",", "0", ",", 
-                    "mteverest", ",", ".1"}], "}"}], "]"}], ",", 
+                    "inputheight", ",", "0.01", ",", 
+                    "\"\<Input height =\>\""}], "}"}], ",", "0.01", ",", 
+                    "mteverest", ",", "0.01"}], "}"}], "]"}], ",", 
                  RowBox[{"Spacer", "[", "5", "]"}], ",", 
                  RowBox[{"Dynamic", "[", "inputheight", "]"}], ",", 
                  RowBox[{"Spacer", "[", "2", "]"}], ",", "\"\<meters\>\""}], 
@@ -134,9 +131,9 @@ have 4.5kg of mass (10Lbs)\>\"", "]"}], ";", "\[IndentingNewLine]",
                    RowBox[{
                     RowBox[{"{", 
                     RowBox[{
-                    "inputmass", ",", "0", ",", " ", "\"\<Input mass =\>\""}],
-                     "}"}], ",", "0", ",", "m821", ",", ".1"}], "}"}], "]"}], 
-                 ",", 
+                    "inputmass", ",", "0.01", ",", " ", 
+                    "\"\<Input mass =\>\""}], "}"}], ",", "0.01", ",", "m821",
+                     ",", "0.01"}], "}"}], "]"}], ",", 
                  RowBox[{"Spacer", "[", "5", "]"}], ",", 
                  RowBox[{"Dynamic", "[", "inputmass", "]"}], ",", 
                  RowBox[{"Spacer", "[", "2", "]"}], ",", 
@@ -230,8 +227,20 @@ have 4.5kg of mass (10Lbs)\>\"", "]"}], ";", "\[IndentingNewLine]",
    3.858890695362026*^9}, {3.8588907684633627`*^9, 3.858890773394916*^9}, {
    3.8588911915591984`*^9, 3.858891198330716*^9}, {3.8588912347525873`*^9, 
    3.8588912380334697`*^9}, {3.8588912693989134`*^9, 3.858891280563298*^9}, {
-   3.8588919732231646`*^9, 3.8588919854836273`*^9}},
- CellLabel->"In[41]:=",ExpressionUUID->"d009f016-4c75-4a58-9ab7-393f97a8a9e0"],
+   3.8588919732231646`*^9, 3.8588919854836273`*^9}, {3.858892521732921*^9, 
+   3.858892546214096*^9}, {3.8588925775812993`*^9, 3.8588926377128987`*^9}, {
+   3.8588927478570414`*^9, 3.858892774917585*^9}, {3.858892813261999*^9, 
+   3.8588928417170115`*^9}, {3.8588928775814323`*^9, 
+   3.8588928788321266`*^9}, {3.8588929155118084`*^9, 
+   3.8588929159335647`*^9}, {3.858893084475568*^9, 3.858893086521973*^9}, {
+   3.858893167855337*^9, 3.858893209890109*^9}, {3.8588932406043725`*^9, 
+   3.8588932844811115`*^9}, {3.858893338926422*^9, 3.858893378715975*^9}, {
+   3.85889341175877*^9, 3.8588934581284046`*^9}, {3.8588935128753643`*^9, 
+   3.8588935153600273`*^9}, {3.8588935697423153`*^9, 3.858893634339588*^9}, {
+   3.8588942431194935`*^9, 3.858894302862456*^9}, {3.858894342701*^9, 
+   3.8588943512148924`*^9}, {3.858894396360738*^9, 3.8588943965794487`*^9}, {
+   3.8588944489088497`*^9, 3.8588944497377186`*^9}},
+ CellLabel->"In[5]:=",ExpressionUUID->"644ed5d6-3b10-4ff9-8535-53246979f42e"],
 
 Cell[CellGroupData[{
 
@@ -241,10 +250,18 @@ is broken at 770mph (344.221m/s)\"\>"], "Print",
   3.858824056375841*^9, 3.858890443424693*^9, 3.8588906583620024`*^9, 
    3.858890696182783*^9, 3.858890776994847*^9, 3.8588912032530375`*^9, 
    3.858891297493187*^9, 3.85889153068305*^9, {3.858891986281185*^9, 
-   3.8588919998840957`*^9}},
+   3.8588919998840957`*^9}, 3.8588924945527186`*^9, {3.8588925491966376`*^9, 
+   3.8588926400199842`*^9}, 3.8588926962356977`*^9, {3.8588927492791386`*^9, 
+   3.8588927753393593`*^9}, {3.858892814840654*^9, 3.858892842294574*^9}, 
+   3.858892882711832*^9, 3.858892916542363*^9, 3.858893110097081*^9, 
+   3.8588931859973583`*^9, 3.8588932480209055`*^9, {3.8588932858501077`*^9, 
+   3.858893314709832*^9}, 3.8588933482455564`*^9, 3.8588933793872814`*^9, 
+   3.858893425512216*^9, 3.8588934611605587`*^9, {3.8588934927154455`*^9, 
+   3.8588935160951405`*^9}, 3.8588936409660177`*^9, 3.8588937892615895`*^9, 
+   3.8588942006376457`*^9, {3.858894230866624*^9, 3.8588944505968847`*^9}},
  CellLabel->
   "During evaluation of \
-In[41]:=",ExpressionUUID->"bd710e8b-1d5d-414f-9dfb-28260b7a385a"],
+In[5]:=",ExpressionUUID->"9bf07580-02df-49d2-8680-1b0613ddf689"],
 
 Cell[BoxData["\<\"Input height of projectile launcher in meters. For \
 reference I am 6'2\\\" (1.88m), the Kimbal tower is 162' (49.378m) and Mt. \
@@ -253,10 +270,18 @@ Everest is 2902' (8848.95m)\"\>"], "Print",
   3.858824056375841*^9, 3.858890443424693*^9, 3.8588906583620024`*^9, 
    3.858890696182783*^9, 3.858890776994847*^9, 3.8588912032530375`*^9, 
    3.858891297493187*^9, 3.85889153068305*^9, {3.858891986281185*^9, 
-   3.8588919999153395`*^9}},
+   3.8588919998840957`*^9}, 3.8588924945527186`*^9, {3.8588925491966376`*^9, 
+   3.8588926400199842`*^9}, 3.8588926962356977`*^9, {3.8588927492791386`*^9, 
+   3.8588927753393593`*^9}, {3.858892814840654*^9, 3.858892842294574*^9}, 
+   3.858892882711832*^9, 3.858892916542363*^9, 3.858893110097081*^9, 
+   3.8588931859973583`*^9, 3.8588932480209055`*^9, {3.8588932858501077`*^9, 
+   3.858893314709832*^9}, 3.8588933482455564`*^9, 3.8588933793872814`*^9, 
+   3.858893425512216*^9, 3.8588934611605587`*^9, {3.8588934927154455`*^9, 
+   3.8588935160951405`*^9}, 3.8588936409660177`*^9, 3.8588937892615895`*^9, 
+   3.8588942006376457`*^9, {3.858894230866624*^9, 3.8588944506125207`*^9}},
  CellLabel->
   "During evaluation of \
-In[41]:=",ExpressionUUID->"43221a20-aadb-4c60-86a9-6c80159f8cbd"],
+In[5]:=",ExpressionUUID->"5ef6dd87-e7f4-46b5-9f05-0c1efe16b741"],
 
 Cell[BoxData["\<\"Input mass of projectile in kg. For reference, .22 Rifle \
 bullets have 0.04kg of mass (0.0881849Lbs) and m821 ammunition for an 81mm \
@@ -265,20 +290,36 @@ mortars have 4.5kg of mass (10Lbs)\"\>"], "Print",
   3.858824056375841*^9, 3.858890443424693*^9, 3.8588906583620024`*^9, 
    3.858890696182783*^9, 3.858890776994847*^9, 3.8588912032530375`*^9, 
    3.858891297493187*^9, 3.85889153068305*^9, {3.858891986281185*^9, 
-   3.858891999930959*^9}},
+   3.8588919998840957`*^9}, 3.8588924945527186`*^9, {3.8588925491966376`*^9, 
+   3.8588926400199842`*^9}, 3.8588926962356977`*^9, {3.8588927492791386`*^9, 
+   3.8588927753393593`*^9}, {3.858892814840654*^9, 3.858892842294574*^9}, 
+   3.858892882711832*^9, 3.858892916542363*^9, 3.858893110097081*^9, 
+   3.8588931859973583`*^9, 3.8588932480209055`*^9, {3.8588932858501077`*^9, 
+   3.858893314709832*^9}, 3.8588933482455564`*^9, 3.8588933793872814`*^9, 
+   3.858893425512216*^9, 3.8588934611605587`*^9, {3.8588934927154455`*^9, 
+   3.8588935160951405`*^9}, 3.8588936409660177`*^9, 3.8588937892615895`*^9, 
+   3.8588942006376457`*^9, {3.858894230866624*^9, 3.858894450628125*^9}},
  CellLabel->
   "During evaluation of \
-In[41]:=",ExpressionUUID->"52d5c4e5-5c99-437a-86c6-06324eaa731f"],
+In[5]:=",ExpressionUUID->"b880f09c-66ac-437e-8e19-48097da42ecc"],
 
 Cell[BoxData["\<\"Input angle of launch\"\>"], "Print",
  CellChangeTimes->{
   3.858824056375841*^9, 3.858890443424693*^9, 3.8588906583620024`*^9, 
    3.858890696182783*^9, 3.858890776994847*^9, 3.8588912032530375`*^9, 
    3.858891297493187*^9, 3.85889153068305*^9, {3.858891986281185*^9, 
-   3.858891999946581*^9}},
+   3.8588919998840957`*^9}, 3.8588924945527186`*^9, {3.8588925491966376`*^9, 
+   3.8588926400199842`*^9}, 3.8588926962356977`*^9, {3.8588927492791386`*^9, 
+   3.8588927753393593`*^9}, {3.858892814840654*^9, 3.858892842294574*^9}, 
+   3.858892882711832*^9, 3.858892916542363*^9, 3.858893110097081*^9, 
+   3.8588931859973583`*^9, 3.8588932480209055`*^9, {3.8588932858501077`*^9, 
+   3.858893314709832*^9}, 3.8588933482455564`*^9, 3.8588933793872814`*^9, 
+   3.858893425512216*^9, 3.8588934611605587`*^9, {3.8588934927154455`*^9, 
+   3.8588935160951405`*^9}, 3.8588936409660177`*^9, 3.8588937892615895`*^9, 
+   3.8588942006376457`*^9, {3.858894230866624*^9, 3.858894450659368*^9}},
  CellLabel->
   "During evaluation of \
-In[41]:=",ExpressionUUID->"a611661d-09a8-4a43-a2f8-ac231012946a"]
+In[5]:=",ExpressionUUID->"4e3d8e9c-461f-4df9-a7a2-900e41ef214e"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -294,8 +335,8 @@ Cell[BoxData[
            Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
            Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
            "\"untitled\"", Typeset`specs$$ = {{{
-              Hold[$CellContext`inputvelocity], 0, "Input Velocity ="}, 0, 
-             344.221, 0.1}, {
+              Hold[$CellContext`inputvelocity], 0.01, "Input velocity ="}, 
+             0.01, 344.221, 0.01}, {
              Hold[
               Row[{
                 Manipulate`Place[1], 
@@ -303,11 +344,12 @@ Cell[BoxData[
                 Dynamic[$CellContext`inputvelocity], 
                 Spacer[2], "meters per second"}]], 
              Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-           5.717968802433461, {0., 7.}}, Typeset`update$$ = 0, 
+           34.307812814600766`, {0., 7.}}, Typeset`update$$ = 0, 
            Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
            
            DynamicBox[Manipulate`ManipulateBoxes[
-            2, StandardForm, "Variables" :> {$CellContext`inputvelocity = 0}, 
+            2, StandardForm, 
+             "Variables" :> {$CellContext`inputvelocity = 0.01}, 
              "ControllerVariables" :> {}, 
              "OtherVariables" :> {
               Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
@@ -315,8 +357,9 @@ Cell[BoxData[
                Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
                Typeset`initDone$$, Typeset`skipInitDone$$}, 
              "Body" :> $CellContext`inputvelocity, 
-             "Specifications" :> {{{$CellContext`inputvelocity, 0, 
-                 "Input Velocity ="}, 0, 344.221, 0.1, ControlPlacement -> 1}, 
+             "Specifications" :> {{{$CellContext`inputvelocity, 0.01, 
+                 "Input velocity ="}, 0.01, 344.221, 0.01, ControlPlacement -> 
+                1}, 
                Row[{
                  Manipulate`Place[1], 
                  Spacer[5], 
@@ -324,7 +367,7 @@ Cell[BoxData[
                  Spacer[2], "meters per second"}]}, 
              "Options" :> {LocalizeVariables -> False}, 
              "DefaultOptions" :> {}],
-            ImageSizeCache->{304., {41.20722654147539, 45.79277345852461}},
+            ImageSizeCache->{318., {41.20722654147539, 45.79277345852461}},
             SingleEvaluation->True],
            Deinitialization:>None,
            DynamicModuleValues:>{},
@@ -343,28 +386,29 @@ Cell[BoxData[
            Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
            Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
            "\"untitled\"", Typeset`specs$$ = {{{
-              Hold[$CellContext`inputheight], 0, "Input height ="}, 0, 
-             8848.95, 0.1}, {
+              Hold[$CellContext`inputheight], 0.01, "Input height ="}, 0.01, 
+             8848.95, 0.01}, {
              Hold[
               Row[{
                 Manipulate`Place[1], 
                 Spacer[5], 
                 Dynamic[$CellContext`inputheight], 
                 Spacer[2], "meters"}]], Manipulate`Dump`ThisIsNotAControl}}, 
-           Typeset`size$$ = {5.717968802433461, {0., 7.}}, Typeset`update$$ = 
+           Typeset`size$$ = {40.02578161703423, {0., 7.}}, Typeset`update$$ = 
            0, Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
            
            DynamicBox[Manipulate`ManipulateBoxes[
-            2, StandardForm, "Variables" :> {$CellContext`inputheight = 0}, 
-             "ControllerVariables" :> {}, 
+            2, StandardForm, "Variables" :> {$CellContext`inputheight = 0.01},
+              "ControllerVariables" :> {}, 
              "OtherVariables" :> {
               Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
                Typeset`animator$$, Typeset`animvar$$, Typeset`name$$, 
                Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
                Typeset`initDone$$, Typeset`skipInitDone$$}, 
              "Body" :> $CellContext`inputheight, 
-             "Specifications" :> {{{$CellContext`inputheight, 0, 
-                 "Input height ="}, 0, 8848.95, 0.1, ControlPlacement -> 1}, 
+             "Specifications" :> {{{$CellContext`inputheight, 0.01, 
+                 "Input height ="}, 0.01, 8848.95, 0.01, ControlPlacement -> 
+                1}, 
                Row[{
                  Manipulate`Place[1], 
                  Spacer[5], 
@@ -372,7 +416,7 @@ Cell[BoxData[
                  Spacer[2], "meters"}]}, 
              "Options" :> {LocalizeVariables -> False}, 
              "DefaultOptions" :> {}],
-            ImageSizeCache->{267., {41.20722654147539, 45.79277345852461}},
+            ImageSizeCache->{286., {41.20722654147539, 45.79277345852461}},
             SingleEvaluation->True],
            Deinitialization:>None,
            DynamicModuleValues:>{},
@@ -391,7 +435,8 @@ Cell[BoxData[
            Typeset`bookmarkList$$ = {}, Typeset`bookmarkMode$$ = "Menu", 
            Typeset`animator$$, Typeset`animvar$$ = 1, Typeset`name$$ = 
            "\"untitled\"", Typeset`specs$$ = {{{
-              Hold[$CellContext`inputmass], 0, "Input mass ="}, 0, 4.5, 0.1}, {
+              Hold[$CellContext`inputmass], 0.01, "Input mass ="}, 0.01, 4.5, 
+             0.01}, {
              Hold[
               Row[{
                 Manipulate`Place[1], 
@@ -399,11 +444,11 @@ Cell[BoxData[
                 Dynamic[$CellContext`inputmass], 
                 Spacer[2], "kilograms"}]], 
              Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-           5.717968802433461, {0., 7.}}, Typeset`update$$ = 0, 
+           22.871875209733844`, {0., 7.}}, Typeset`update$$ = 0, 
            Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
            
            DynamicBox[Manipulate`ManipulateBoxes[
-            2, StandardForm, "Variables" :> {$CellContext`inputmass = 0}, 
+            2, StandardForm, "Variables" :> {$CellContext`inputmass = 0.01}, 
              "ControllerVariables" :> {}, 
              "OtherVariables" :> {
               Typeset`show$$, Typeset`bookmarkList$$, Typeset`bookmarkMode$$, 
@@ -411,8 +456,8 @@ Cell[BoxData[
                Typeset`specs$$, Typeset`size$$, Typeset`update$$, 
                Typeset`initDone$$, Typeset`skipInitDone$$}, 
              "Body" :> $CellContext`inputmass, 
-             "Specifications" :> {{{$CellContext`inputmass, 0, 
-                 "Input mass ="}, 0, 4.5, 0.1, ControlPlacement -> 1}, 
+             "Specifications" :> {{{$CellContext`inputmass, 0.01, 
+                 "Input mass ="}, 0.01, 4.5, 0.01, ControlPlacement -> 1}, 
                Row[{
                  Manipulate`Place[1], 
                  Spacer[5], 
@@ -420,7 +465,7 @@ Cell[BoxData[
                  Spacer[2], "kilograms"}]}, 
              "Options" :> {LocalizeVariables -> False}, 
              "DefaultOptions" :> {}],
-            ImageSizeCache->{271., {41.20722654147539, 45.79277345852461}},
+            ImageSizeCache->{279., {41.20722654147539, 45.79277345852461}},
             SingleEvaluation->True],
            Deinitialization:>None,
            DynamicModuleValues:>{},
@@ -446,14 +491,23 @@ Cell[BoxData[
         DynamicBox[Typeset`ToBoxes[
           Arrow[{{0, 0}, $CellContext`p}], StandardForm, Graphics],
          ImageSizeCache->{{38.58578643762691, 
-          66.70079050452418}, {-32.24915863911719, -0.5217864376269041}}]}},
+          52.27496311481045}, {-40.18232074020411, -0.5217864376269006}}]}},
       ImageSize->Tiny],
      Appearance->None], ",", 
     DynamicBox[ToBoxes[$CellContext`inputangle, StandardForm],
-     ImageSizeCache->{45.74375041946769, {0., 7.}}]}], "}"}],
+     ImageSizeCache->{5.717968802433461, {0., 7.}}]}], "}"}],
   DynamicModuleValues:>{}]], "Output",
- CellChangeTimes->{{3.858891986968911*^9, 3.8588919999778237`*^9}},
- CellLabel->"Out[42]=",ExpressionUUID->"c4e63dd9-10fa-4c41-8d87-d4d1b99093f6"]
+ CellChangeTimes->{{3.858891986968911*^9, 3.8588919999778237`*^9}, 
+   3.8588924947714033`*^9, {3.8588925493059883`*^9, 3.858892640254306*^9}, 
+   3.858892696454423*^9, {3.8588927493728685`*^9, 3.8588927754487066`*^9}, {
+   3.8588928149500027`*^9, 3.85889284240397*^9}, 3.858892882821181*^9, 
+   3.85889291666831*^9, 3.8588931102067137`*^9, 3.8588931861067047`*^9, 
+   3.8588932481302576`*^9, {3.8588932859750786`*^9, 3.858893314819182*^9}, 
+   3.85889334841739*^9, 3.858893379496635*^9, 3.8588934256840706`*^9, 
+   3.8588934612699265`*^9, {3.858893492887267*^9, 3.858893516220108*^9}, 
+   3.8588936410755444`*^9, 3.8588937896208773`*^9, 3.858894201012556*^9, {
+   3.858894231038435*^9, 3.8588944507066317`*^9}},
+ CellLabel->"Out[6]=",ExpressionUUID->"fc2ef946-74ee-481a-935a-257fbb3e9cba"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -24857,11 +24911,11 @@ AIDPH/8HCHhPVw==
    ImageSizeRaw->{1500., 1500.},
    PlotRange->{{0, 1500.}, {0, 1500.}}]}]], "Input",
  CellChangeTimes->{{3.8588919234047832`*^9, 
-  3.8588919421208515`*^9}},ExpressionUUID->"dc6538c6-779e-4341-8bc9-\
-3db497938272"]
+  3.8588919421208515`*^9}},ExpressionUUID->"c1034115-d572-4e2a-85c8-\
+91b25c944c2b"]
 },
-WindowSize->{1024.5, 507.75},
-WindowMargins->{{-6, Automatic}, {Automatic, -6}},
+WindowSize->{1012.5, 501.75},
+WindowMargins->{{0, Automatic}, {Automatic, 0}},
 TaggingRules-><|"TryRealOnly" -> False|>,
 Magnification:>0.8 Inherited,
 FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
@@ -24880,16 +24934,16 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 11179, 211, 769, "Input",ExpressionUUID->"d009f016-4c75-4a58-9ab7-393f97a8a9e0"],
+Cell[580, 22, 11895, 220, 738, "Input",ExpressionUUID->"644ed5d6-3b10-4ff9-8535-53246979f42e"],
 Cell[CellGroupData[{
-Cell[11784, 237, 494, 9, 18, "Print",ExpressionUUID->"bd710e8b-1d5d-414f-9dfb-28260b7a385a"],
-Cell[12281, 248, 558, 10, 18, "Print",ExpressionUUID->"43221a20-aadb-4c60-86a9-6c80159f8cbd"],
-Cell[12842, 260, 569, 10, 18, "Print",ExpressionUUID->"52d5c4e5-5c99-437a-86c6-06324eaa731f"],
-Cell[13414, 272, 420, 8, 18, "Print",ExpressionUUID->"a611661d-09a8-4a43-a2f8-ac231012946a"]
+Cell[12500, 246, 1145, 17, 18, "Print",ExpressionUUID->"9bf07580-02df-49d2-8680-1b0613ddf689"],
+Cell[13648, 265, 1209, 18, 18, "Print",ExpressionUUID->"5ef6dd87-e7f4-46b5-9f05-0c1efe16b741"],
+Cell[14860, 285, 1220, 18, 18, "Print",ExpressionUUID->"b880f09c-66ac-437e-8e19-48097da42ecc"],
+Cell[16083, 305, 1071, 16, 18, "Print",ExpressionUUID->"4e3d8e9c-461f-4df9-a7a2-900e41ef214e"]
 }, Open  ]],
-Cell[13849, 283, 8000, 172, 310, "Output",ExpressionUUID->"c4e63dd9-10fa-4c41-8d87-d4d1b99093f6"]
+Cell[17169, 324, 8761, 185, 284, "Output",ExpressionUUID->"fc2ef946-74ee-481a-935a-257fbb3e9cba"]
 }, Open  ]],
-Cell[21864, 458, 1487605, 24402, 145, "Input",ExpressionUUID->"dc6538c6-779e-4341-8bc9-3db497938272"]
+Cell[25945, 512, 1487605, 24402, 145, "Input",ExpressionUUID->"c1034115-d572-4e2a-85c8-91b25c944c2b"]
 }
 ]
 *)
