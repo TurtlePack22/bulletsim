@@ -10,10 +10,10 @@
 NotebookFileLineBreakTest
 NotebookFileLineBreakTest
 NotebookDataPosition[       158,          7]
-NotebookDataLength[   3006888,      49466]
-NotebookOptionsPosition[   3005486,      49437]
-NotebookOutlinePosition[   3005963,      49455]
-CellTagsIndexPosition[   3005920,      49452]
+NotebookDataLength[   3002749,      49358]
+NotebookOptionsPosition[   3001642,      49332]
+NotebookOutlinePosition[   3002120,      49350]
+CellTagsIndexPosition[   3002077,      49347]
 WindowFrame->Normal*)
 
 (* Beginning of Notebook Content *)
@@ -24685,8 +24685,7 @@ AIDPH/8HCHhPVw==
    3.858898332738803*^9}, {3.8588983690608006`*^9, 3.858898389791011*^9}, {
    3.858898464274012*^9, 3.858898478654457*^9}, {3.8588986857443924`*^9, 
    3.8588987334717994`*^9}},
- CellLabel->
-  "In[106]:=",ExpressionUUID->"784e3dea-d622-4022-b117-6aadc08561f1"],
+ CellLabel->"In[96]:=",ExpressionUUID->"784e3dea-d622-4022-b117-6aadc08561f1"],
 
 Cell[CellGroupData[{
 
@@ -24695,10 +24694,11 @@ is broken at 770mph (344.221m/s)\"\>"], "Print",
  CellChangeTimes->{{3.858898326097115*^9, 3.85889834985368*^9}, 
    3.858898398868923*^9, 3.8588984793735905`*^9, 3.8588986880420294`*^9, {
    3.858898755445754*^9, 3.8588987644165716`*^9}, {3.858898909926216*^9, 
-   3.858898935102061*^9}},
+   3.858898935102061*^9}, {3.858995155298245*^9, 3.8589951626058016`*^9}, {
+   3.858995626160031*^9, 3.8589956340059175`*^9}, 3.858995760603448*^9},
  CellLabel->
   "During evaluation of \
-In[106]:=",ExpressionUUID->"92f1a186-05ec-465b-8260-6a6368623109"],
+In[96]:=",ExpressionUUID->"ccda6530-0336-487f-b246-8f0ba25da977"],
 
 Cell[BoxData["\<\"Input height of projectile launcher in meters. For \
 reference I am 6'2\\\" (1.88m), the Kimball tower is 162' (49.378m), and the \
@@ -24706,10 +24706,11 @@ Empire State Building is 1454' (443.18m)\"\>"], "Print",
  CellChangeTimes->{{3.858898326097115*^9, 3.85889834985368*^9}, 
    3.858898398868923*^9, 3.8588984793735905`*^9, 3.8588986880420294`*^9, {
    3.858898755445754*^9, 3.8588987644165716`*^9}, {3.858898909926216*^9, 
-   3.858898935351983*^9}},
+   3.858898935102061*^9}, {3.858995155298245*^9, 3.8589951626058016`*^9}, {
+   3.858995626160031*^9, 3.8589956340059175`*^9}, 3.858995760609725*^9},
  CellLabel->
   "During evaluation of \
-In[106]:=",ExpressionUUID->"e577fc2b-da1d-433f-a270-4ee075e167c3"],
+In[96]:=",ExpressionUUID->"78717c86-1f15-46dd-8c6f-cba1bf584b60"],
 
 Cell[BoxData["\<\"Input mass of projectile in kg. For reference, .22 Rifle \
 bullets have 0.04kg of mass (0.0881849Lbs) and m821 ammunition for an 81mm \
@@ -24717,19 +24718,21 @@ mortars have 4.5kg of mass (10Lbs)\"\>"], "Print",
  CellChangeTimes->{{3.858898326097115*^9, 3.85889834985368*^9}, 
    3.858898398868923*^9, 3.8588984793735905`*^9, 3.8588986880420294`*^9, {
    3.858898755445754*^9, 3.8588987644165716`*^9}, {3.858898909926216*^9, 
-   3.858898935367605*^9}},
+   3.858898935102061*^9}, {3.858995155298245*^9, 3.8589951626058016`*^9}, {
+   3.858995626160031*^9, 3.8589956340059175`*^9}, 3.858995760617962*^9},
  CellLabel->
   "During evaluation of \
-In[106]:=",ExpressionUUID->"75e117fc-c240-48de-8e42-f978f4e4cc1a"],
+In[96]:=",ExpressionUUID->"fac53d45-c59a-4363-b365-816fa56639a6"],
 
 Cell[BoxData["\<\"Input angle of launch in radians\"\>"], "Print",
  CellChangeTimes->{{3.858898326097115*^9, 3.85889834985368*^9}, 
    3.858898398868923*^9, 3.8588984793735905`*^9, 3.8588986880420294`*^9, {
    3.858898755445754*^9, 3.8588987644165716`*^9}, {3.858898909926216*^9, 
-   3.858898935383238*^9}},
+   3.858898935102061*^9}, {3.858995155298245*^9, 3.8589951626058016`*^9}, {
+   3.858995626160031*^9, 3.8589956340059175`*^9}, 3.8589957606220245`*^9},
  CellLabel->
   "During evaluation of \
-In[106]:=",ExpressionUUID->"a59f1a84-aec0-49a1-86b1-5390d43e6135"],
+In[96]:=",ExpressionUUID->"c71f0f52-c3e3-405c-9f61-bfa484e730a8"],
 
 Cell[BoxData[
  RowBox[{"{", 
@@ -49135,10 +49138,11 @@ AIDPH/8HCHhPVw==
  CellChangeTimes->{{3.858898326097115*^9, 3.85889834985368*^9}, 
    3.858898398868923*^9, 3.8588984793735905`*^9, 3.8588986880420294`*^9, {
    3.858898755445754*^9, 3.8588987644165716`*^9}, {3.858898909926216*^9, 
-   3.8588989354144683`*^9}},
+   3.858898935102061*^9}, {3.858995155298245*^9, 3.8589951626058016`*^9}, {
+   3.858995626160031*^9, 3.8589956340059175`*^9}, 3.8589957606373253`*^9},
  CellLabel->
   "During evaluation of \
-In[106]:=",ExpressionUUID->"0064ff7b-9ea8-4cf4-a546-e6f5efa3f362"]
+In[96]:=",ExpressionUUID->"5f4b2262-77a3-4364-a7c1-2d30cdef2d17"]
 }, Open  ]],
 
 Cell[BoxData[
@@ -49163,7 +49167,7 @@ Cell[BoxData[
                 Dynamic[$CellContext`inputvelocity], 
                 Spacer[2], "meters per second"}]], 
              Manipulate`Dump`ThisIsNotAControl}}, Typeset`size$$ = {
-           35.02255822671577, {0., 6.}}, Typeset`update$$ = 0, 
+           30.019335622899234`, {0., 6.}}, Typeset`update$$ = 0, 
            Typeset`initDone$$, Typeset`skipInitDone$$ = True}, 
            
            DynamicBox[Manipulate`ManipulateBoxes[
@@ -49186,7 +49190,7 @@ Cell[BoxData[
                  Spacer[2], "meters per second"}]}, 
              "Options" :> {LocalizeVariables -> False}, 
              "DefaultOptions" :> {}],
-            ImageSizeCache->{283., {37.99382326321211, 42.00617673678789}},
+            ImageSizeCache->{279., {37.99382326321211, 42.00617673678789}},
             SingleEvaluation->True],
            Deinitialization:>None,
            DynamicModuleValues:>{},
@@ -49213,7 +49217,7 @@ Cell[BoxData[
                 Spacer[5], 
                 Dynamic[$CellContext`inputheight], 
                 Spacer[2], "meters"}]], Manipulate`Dump`ThisIsNotAControl}}, 
-           Typeset`size$$ = {20.012890415266156`, {0., 6.}}, 
+           Typeset`size$$ = {30.019335622899234`, {0., 6.}}, 
            Typeset`update$$ = 0, Typeset`initDone$$, Typeset`skipInitDone$$ = 
            True}, 
            
@@ -49235,7 +49239,7 @@ Cell[BoxData[
                  Spacer[2], "meters"}]}, 
              "Options" :> {LocalizeVariables -> False}, 
              "DefaultOptions" :> {}],
-            ImageSizeCache->{243., {37.99382326321211, 42.00617673678789}},
+            ImageSizeCache->{249., {37.99382326321211, 42.00617673678789}},
             SingleEvaluation->True],
            Deinitialization:>None,
            DynamicModuleValues:>{},
@@ -49321,122 +49325,13 @@ Cell[BoxData[
  CellChangeTimes->{{3.8588983270500126`*^9, 3.8588983504789276`*^9}, 
    3.858898399536785*^9, 3.858898480020439*^9, 3.858898688652049*^9, {
    3.8588987560913467`*^9, 3.858898765210162*^9}, {3.8588989105510683`*^9, 
-   3.8588989357268953`*^9}},
- CellLabel->
-  "Out[107]=",ExpressionUUID->"02ca1fb3-d233-49bd-90dc-5d1d0ba0644b"],
-
-Cell[BoxData[
- DynamicModuleBox[{$CellContext`task$$ = ScheduledTaskObject[17, 
-   HoldForm[$CellContext`contents$$ = Map[If[Part[#, 1, 2] >= 0, 
-        $CellContext`NextXYV[
-         Part[#, 1], 
-         Part[#, 2]], {{
-          Part[#, 1, 1], 0}, {1, -$CellContext`bounce} 
-         Part[#, 2]}]& , $CellContext`contents$$]; Null], {
-   0.041666666666666664`, 
-    DirectedInfinity[1]}, Automatic, False, "AutoRemove" -> False, 
-   "EpilogFunction" :> Null, "TaskGroup" -> "Global`"], $CellContext`xy$$ = {
-  1.6485141199234226`, 500.}, $CellContext`v$$ = {4.290540382611766, 
-  0.}, $CellContext`contents$$ = {{{968.3989374980283, 29.006417888154445`}, {
-   10.792553025937599`, 2.8903239978086104`}}, {{927.0521137867996, 
-   42.734241911121224`}, {12.65302782423977, -15.776559958533953`}}, {{
-   116.5648304783457, 36.210479950107256`}, {1.8800866401354828`, 
-   21.269633717606556`}}, {{1309.6878995641662`, 26.473145841271325`}, {
-   37.160903492839324`, 46.19734339681101}}, {{473.60291036347064`, 
-   180.11312556626459`}, {27.61217207504168, 
-   27.6760160407852}}, {{0, 500.}, {58.71959379992009, 0.}}}}, 
-  TagBox[GridBox[{
-     {
-      FrameBox[
-       TagBox[
-        GraphicsBox[
-         {PointSize[0.01], 
-          PointBox[Dynamic[Map[First, $CellContext`contents$$]]], InsetBox[
-           FormBox[
-            GraphicsBox[
-             TagBox[RasterBox[CompressedData["
-1:eJztlcEKgkAQhpfq0LEH6FDQQ3Tt2NXoAZQ26WKgQfTO4ivUHkqEnNnZ2XFX
-ooVfWNmZ7xN0XGfX5DxRSlVzc0nS+64s08dhYTbHorrkhT7ti5vOdbnNpubm
-6p2ZYq2nJUOstn+z3KARdiExCS4sNpcLeERhMxysveq67o2AA4vr4oE4eHOp
-HoCDKBtz6OEPwnZwGB1fig05dPisZ/c933EQ6cWp4/C5s+nP/w1+iPcv8PcX
-e/6Mcv4G5sf+/4J8HweoH8BHHVw8sB4Im+SAedjqCGyyg2sc2OIODHbr4OPx
-qWeyvzwoLt2zAlzUBYjTegFK843c
-               "], {{0, 32.}, {32., 0}}, {0, 255},
-               ColorFunction->RGBColor],
-              BoxForm`ImageTag[
-              "Byte", ColorSpace -> "RGB", Interleaving -> True],
-              Selectable->False],
-             DefaultBaseStyle->"ImageGraphics",
-             ImageSizeRaw->{32., 32.},
-             PlotRange->{{0, 32.}, {0, 32.}}],
-            TraditionalForm], Dynamic[$CellContext`targetxy], {28, 28}, 50]},
-         ImageSize->Large,
-         PlotRange->{{0, 500}, {0, 500}}],
-        EventHandlerTag[{
-         "MouseDown" :> ($CellContext`targetxy = MousePosition["Graphics"]), 
-          Method -> "Preemptive", PassEventsDown -> Automatic, PassEventsUp -> 
-          True}]],
-       StripOnInput->False]},
-     {
-      ButtonBox["\<\"Fire\"\>",
-       Appearance->Automatic,
-       ButtonFunction:>
-        AppendTo[$CellContext`contents$$, {{
-          0, $CellContext`height}, {$CellContext`startvx, \
-$CellContext`startvy}}],
-       Evaluator->Automatic,
-       Method->"Preemptive"]},
-     {
-      ButtonBox["\<\"Aim\"\>",
-       Appearance->Automatic,
-       ButtonFunction:>$CellContext`requiredVelocity[
-         Part[$CellContext`targetxy, 1], 
-         Part[$CellContext`targetxy, 
-          2], $CellContext`startx, $CellContext`starty],
-       Evaluator->Automatic,
-       Method->"Preemptive"]},
-     {
-      ButtonBox["\<\"Reset\"\>",
-       Appearance->Automatic,
-       ButtonFunction:>($CellContext`contents$$ = {}),
-       Evaluator->Automatic,
-       Method->"Preemptive"]}
-    },
-    DefaultBaseStyle->"Column",
-    GridBoxAlignment->{"Columns" -> {{Left}}},
-    GridBoxItemSize->{"Columns" -> {{Automatic}}, "Rows" -> {{Automatic}}}],
-   "Column"],
-  DynamicModuleValues:>{},
-  Initialization:>($CellContext`task$$ = 
-    CreateScheduledTask[$CellContext`contents$$ = Map[If[Part[#, 1, 2] >= 0, 
-          $CellContext`NextXYV[
-           Part[#, 1], 
-           Part[#, 2]], {{
-            Part[#, 1, 1], 0}, {1, -$CellContext`bounce} 
-           Part[#, 2]}]& , $CellContext`contents$$]; Null, 
-      1./$CellContext`fps]; StartScheduledTask[$CellContext`task$$]; 
-   Null)]], "Output",
- CellChangeTimes->{{3.8588983270500126`*^9, 3.8588983504789276`*^9}, 
-   3.858898399536785*^9, 3.858898480020439*^9, 3.858898688652049*^9, {
-   3.8588987560913467`*^9, 3.858898765210162*^9}, {3.8588989105510683`*^9, 
-   3.858898935961214*^9}},
- CellLabel->
-  "Out[108]=",ExpressionUUID->"ef846ca7-0101-4d1b-a213-f015f1204dc4"]
-}, Open  ]],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.8588919234047832`*^9, 3.8588919421208515`*^9}, {
-  3.858896407249073*^9, 
-  3.858896422486828*^9}},ExpressionUUID->"76b931bb-21f3-4424-9c40-\
-e0c870c9a5e4"],
-
-Cell[BoxData[""], "Input",
- CellChangeTimes->{{3.8588963442593417`*^9, 
-  3.858896348073491*^9}},ExpressionUUID->"5e319794-48bf-4a5f-80ff-\
-13ba0f9712f7"]
+   3.8588989357268953`*^9}, {3.8589951553867655`*^9, 3.858995162673169*^9}, {
+   3.858995626336734*^9, 3.858995634179227*^9}, 3.8589957607425385`*^9},
+ CellLabel->"Out[97]=",ExpressionUUID->"5c9b7417-cd5e-4766-a875-edccdf0da164"]
+}, Open  ]]
 },
-WindowSize->{1012.5, 495.75},
-WindowMargins->{{0, Automatic}, {Automatic, 0}},
+WindowSize->{718.5, 741.},
+WindowMargins->{{-5.25, Automatic}, {Automatic, 0}},
 TaggingRules-><|"TryRealOnly" -> False|>,
 Magnification:>0.7 Inherited,
 FrontEndVersion->"13.0 for Microsoft Windows (64-bit) (December 2, 2021)",
@@ -49455,20 +49350,19 @@ CellTagsIndex->{}
 (*NotebookFileOutline
 Notebook[{
 Cell[CellGroupData[{
-Cell[580, 22, 1502064, 24666, 890, "Input",ExpressionUUID->"784e3dea-d622-4022-b117-6aadc08561f1"],
+Cell[580, 22, 1502060, 24665, 970, "Input",ExpressionUUID->"784e3dea-d622-4022-b117-6aadc08561f1"],
 Cell[CellGroupData[{
-Cell[1502669, 24692, 474, 8, 17, "Print",ExpressionUUID->"92f1a186-05ec-465b-8260-6a6368623109"],
-Cell[1503146, 24702, 553, 9, 17, "Print",ExpressionUUID->"e577fc2b-da1d-433f-a270-4ee075e167c3"],
-Cell[1503702, 24713, 551, 9, 17, "Print",ExpressionUUID->"75e117fc-c240-48de-8e42-f978f4e4cc1a"],
-Cell[1504256, 24724, 413, 7, 17, "Print",ExpressionUUID->"a59f1a84-aec0-49a1-86b1-5390d43e6135"],
-Cell[1504672, 24733, 1487888, 24407, 124, "Print",ExpressionUUID->"0064ff7b-9ea8-4cf4-a546-e6f5efa3f362"]
+Cell[1502665, 24691, 595, 9, 17, "Print",ExpressionUUID->"ccda6530-0336-487f-b246-8f0ba25da977"],
+Cell[1503263, 24702, 674, 10, 28, "Print",ExpressionUUID->"78717c86-1f15-46dd-8c6f-cba1bf584b60"],
+Cell[1503940, 24714, 672, 10, 28, "Print",ExpressionUUID->"fac53d45-c59a-4363-b365-816fa56639a6"],
+Cell[1504615, 24726, 536, 8, 17, "Print",ExpressionUUID->"c71f0f52-c3e3-405c-9f61-bfa484e730a8"],
+Cell[1505154, 24736, 1488009, 24408, 124, "Print",ExpressionUUID->"5f4b2262-77a3-4364-a7c1-2d30cdef2d17"]
 }, Open  ]],
-Cell[2992575, 49143, 8328, 182, 273, "Output",ExpressionUUID->"02ca1fb3-d233-49bd-90dc-5d1d0ba0644b"],
-Cell[3000906, 49327, 4199, 96, 517, "Output",ExpressionUUID->"ef846ca7-0101-4d1b-a213-f015f1204dc4"]
-}, Open  ]],
-Cell[3005120, 49426, 205, 4, 21, "Input",ExpressionUUID->"76b931bb-21f3-4424-9c40-e0c870c9a5e4"],
-Cell[3005328, 49432, 154, 3, 21, "Input",ExpressionUUID->"5e319794-48bf-4a5f-80ff-13ba0f9712f7"]
+Cell[2993178, 49147, 8448, 182, 273, "Output",ExpressionUUID->"5c9b7417-cd5e-4766-a875-edccdf0da164"]
+}, Open  ]]
 }
 ]
 *)
+
+(* End of internal cache information *)
 
